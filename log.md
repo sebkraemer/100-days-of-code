@@ -14,3 +14,21 @@ I enjoyed getting started. Tools and commands are a lot to grasp at once. Regard
 
 **Link to work:** [day001](./day001)
 
+## Day 2
+
+November 12, 2021
+
+**Today's Progress**
+
+Less of a Go than a DevOps day.
+Noticed that the one test actually failed. Fixed it and added a github workflow to build and test automatically. Added the badge to the README, that just looks nice.
+A bit of ground work, reading about different kinds of for loops in Go. Sorry, no code.
+
+**Thoughts**
+
+Always test. And make sure that tests do run!
+I like doing DevOps.
+
+**Link to work:**
+- [ReverseString bugfix](https://github.com/sebkraemer/100-days-of-code/commit/db6c39ffa216d7cb17193e3dd90ae10e5ad6fd74)
+- [day001 test and build workflow](./actions/runs/1454887039)
