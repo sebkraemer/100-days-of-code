@@ -1,3 +1,5 @@
+![example workflow](https://github.com/sebkraemer/100-days-of-code/actions/workflows/day001.yml/badge.svg)
+
 # Log of day 1
 
 - installed go and setup VS Code for go
