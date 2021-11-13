@@ -32,3 +32,18 @@ I like doing DevOps.
 **Link to work:**
 - [ReverseString bugfix](https://github.com/sebkraemer/100-days-of-code/commit/db6c39ffa216d7cb17193e3dd90ae10e5ad6fd74)
 - [day001 test and build workflow](./actions/runs/1454887039)
+
+## Day 3
+
+November 13, 2021
+
+**Today's Progress**
+- Continued to read the *Learning Go* book but didn't find the time to write more flash cards.
+- `controls.go` program with playground code with if, for ("four for loops"), break, continue, , labels, switch/case
+
+**Thoughts**
+- I need some getting used to opening brackets on the same line..
+- wonder how to see the value in the debugger for values declared in scope of if statement, e.g. `if n := getValue(); ..`, VS Code won't show me the value.
+- I wonder if fmt.Print does get and sort all values before outputting, because it's always sorted but iterating over the map has a random portion and is nondeterministic.
+
+**Link to work:** [day003](./day003)
