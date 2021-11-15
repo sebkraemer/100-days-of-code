@@ -47,3 +47,16 @@ November 13, 2021
 - I wonder if fmt.Print does get and sort all values before outputting, because it's always sorted but iterating over the map has a random portion and is nondeterministic.
 
 **Link to work:** [day003](./day003)
+
+
+## Day 4
+
+November 14, 2021
+
+**Today's Progress**
+- updated (added) flash cards
+- started chapter about functions
+- started with a @codility lesson but couldn’t finish (too late, really 🥱)
+
+**Link to work:** [day004](./day004)
+
