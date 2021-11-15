@@ -98,6 +98,7 @@ func fourForStatements() {
 	fmt.Println(s)
 	for i, r := range s {
 		if i == 0 {
+			fmt.Printf("type of i: %T\n", i)
 			fmt.Printf("type of r: %T\n", r) // int32 aka rune, i.e. not byte
 		}
 		fmt.Print("i:", i, " r:", r, " ")
