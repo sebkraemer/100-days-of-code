@@ -60,3 +60,15 @@ November 14, 2021
 
 **Link to work:** [day004](./day004)
 
+
+## Day 5
+
+November 15, 2021
+
+**Today's Progress**
+- Continued functions topic
+
+**Thoughts**
+- I like reading and learning from the book. Sometimes I look up a new topic at [the spec](https://golang.org/ref/spec#Function_types) to see what the language reference says. 🤓📘  Compared to C++, Go's ref is sooo easy to read.
+
+**Link to work:** --
