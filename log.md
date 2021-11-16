@@ -70,5 +70,23 @@ November 15, 2021
 
 **Thoughts**
 - I like reading and learning from the book. Sometimes I look up a new topic at [the spec](https://golang.org/ref/spec#Function_types) to see what the language reference says. 🤓📘  Compared to C++, Go's ref is sooo easy to read.
+- A quote by @jonbodner from the “Functions” chapter I want to share: *Error handling is what separates the professionals from the amateurs.* ☝️
 
 **Link to work:** --
+
+
+## Day 6
+
+November 16, 2021
+
+**Today's Progress**
+
+- wrote the book's calculator example from memory, solved it a bit differently, I think
+- updated (added) flash cards
+
+**Thoughts**
+- It didn't go too bad when writing the calculator while combining several topics that I conquered from the book!
+- Still working with the book (which I think is the right thing) does not leave much room for starting more serious coding work. Maybe I should even prioritize the book part to be done with it sooner than later.
+
+**Link to work:** [day006](./day006)
+
