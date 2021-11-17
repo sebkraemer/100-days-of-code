@@ -18,3 +18,8 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - when to use which variable declaration?
 - on what types does the for range loop work?
 - iterating over map is not deterministic (anti hash DOS mechanism), but fmt.Print print it sorted. how? is it possible without getting and sorting all values first?
+- Pointers chapter notices that the interface{} parameter needs a pointer and that this API pattern is used because of lack of generics. Generics being almost there, how does that compare? will e.g. the JSON.Unmarshal method change?
+
+# TODOs
+- I should experiment/revisit sub-slicing and changing slices in functions: modifying values, append()
+- Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.

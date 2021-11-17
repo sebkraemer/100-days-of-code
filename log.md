@@ -90,3 +90,16 @@ November 16, 2021
 
 **Link to work:** [day006](./day006)
 
+
+## Day 7
+
+November 17, 2021
+
+**Today's Progress**
+
+- *Learning Go* pages 107-132/340
+- added memory chapter flash cards
+
+**Thoughts**
+- Interesting chapter abount memory (heap) management and garbage collection.
+  It appears Go finds a good tradeoff between performance and using the pass by value approach. Once more I recognize roots of C but leaving out most of its heritage. Even in C++ community, traditionally very performance concerned folks, I have read about the advantages of value based interfaces compared to optimizing performance but making compiler's and developer's work harder to track those variables.
