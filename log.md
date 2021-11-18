@@ -103,3 +103,22 @@ November 17, 2021
 **Thoughts**
 - Interesting chapter abount memory (heap) management and garbage collection.
   It appears Go finds a good tradeoff between performance and using the pass by value approach. Once more I recognize roots of C but leaving out most of its heritage. Even in C++ community, traditionally very performance concerned folks, I have read about the advantages of value based interfaces compared to optimizing performance but making compiler's and developer's work harder to track those variables.
+
+## Day 8
+
+November 18, 2021
+
+**Today's Progress**
+
+- played around with slice memory management, verifying my understanding of subslicing, appending, forced copying of memory blocks (cap exceeded cases)
+- did my bit repeating flash cards (as I always do)
+- read the article about @antlr with @Golang and discovered struct's embedded fields (just a few pages ahead in my book, hadn't read that yet)
+- #100DaysOfCode socializing
+- listened to most of "Go time" podcast from @changelog: Building actually maintainable software https://gotime.fm/196
+
+**Thoughts**
+- What's with all the WakaTime (sic) tweets in my #100DaysOfCode feed all of a sudden? 🤨
+- Behaviour that is hard to describe in detail (many words) are easy to grasp once you get to the roots of it (i.e., understand slice's memory layout and behavior)
+- Regarding the podcast I liked the most "Untestable code is unmaintainable code" (uncredited) and "fight for your space and time to keep your software maintainable" (uncredited). And in general it's interesting to see that maintainability has several aspects and how to approach the problem differs in teams and depending on the kind of development phase and product.
+
+**Link to work:** [day008](./day008)
