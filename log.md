@@ -122,3 +122,24 @@ November 18, 2021
 - Regarding the podcast I liked the most "Untestable code is unmaintainable code" (uncredited) and "fight for your space and time to keep your software maintainable" (uncredited). And in general it's interesting to see that maintainability has several aspects and how to approach the problem differs in teams and depending on the kind of development phase and product.
 
 **Link to work:** [day008](./day008)
+
+
+## Day 9
+
+November 19, 2021
+
+**Today's Progress**
+
+- revisited (and solved) codility's binarygap problem (I'm no competitive programmer at this point, that's for sure 😆)
+- dabbled with #vscode Go unit testing, but leaving the topic for another day
+
+**Thoughts**
+
+Competitive programming tasks are quite unusual for me so getting to the solution was rather time intensive, given it wasn't a difficult problem.
+While practicing these kind of things are generally good, I'm not sure it's the best use of my time *right now*. Programming the solution is rather easy (language-wise) but getting to a working algorithm is a much greater part of the challenge. And I'm here for learning to apply the language.
+
+I also had a bit of a problem with the local `binarygap` module but it was fixed by not registering the package in the subfolder.
+
+No book reading today, I'm afraid.
+
+**Link to work:** [day009](./day009)
