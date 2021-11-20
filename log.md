@@ -143,3 +143,25 @@ I also had a bit of a problem with the local `binarygap` module but it was fixed
 No book reading today, I'm afraid.
 
 **Link to work:** [day009](./day009)
+
+
+## Day 10
+
+November 20, 2021
+
+**Today's Progress**
+
+- solved confusion about %q and %c format specifiers
+- revistied method calling on nil pointer, can be OK!
+- *Learning Go* pages 133-145/340
+
+**Thoughts**
+
+Possibly genius but it needed a second though to grasp this:
+
+```
+var it *IntTree // zero value: nil
+it = it.Insert(5) // might panic or not
+```
+
+works because a method can be called on a nil instance. If it is implemented to support the case, good things happen.
