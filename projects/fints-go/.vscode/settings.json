@@ -1,0 +1,7 @@
+{
+    "antlr4.generation": {
+        "language": "Go",
+        "visitors": true,
+        "mode": "external"
+    }
+}
