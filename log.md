@@ -165,3 +165,44 @@ it = it.Insert(5) // might panic or not
 ```
 
 works because a method can be called on a nil instance. If it is implemented to support the case, good things happen.
+
+
+## Day 11
+
+November 21, 2021
+
+**Today's Progress**
+
+- *Learning Go* pages 146-157/340
+
+**Thoughts**
+
+Nontrivial stuff in the Interfaces chapter. It’s slowing me down 😞 but I also realise that this is essential stuff.
+
+It’s true that Go is always famous for its concurrency model but not for its implicit interfaces.
+
+
+## Day 12
+
+November 22, 2021
+
+**Today's Progress**
+
+- *Learning Go* pages 157-160/340, finishing Interfaces chapter with Dependency Injection
+- Bootstrapped fints-go, a parsing project in Go.
+
+**Thoughts**
+
+Apparently functions are a so much first class citizens that you can even declare methods on them, and this can be used to implement an interface. 🙇‍♂️ It's quite fascinating.
+
+I don't find the tweet right now that I stumbled upon today (it was a #100DaysOfCode one!), anyway it recommends a 70/30 practicing to stuying ratio for learning a new topic. I'm too much on the learning side. On the other hand, maybe that ration changes and it's good to have a stronger theory part when starting off to code your project.
+
+Interface chapter is not so straightforward to put into flash cards and I certainly don't want that holding me back any longer. Will have to get back to it. However, I believe some concepts have become clear by now.
+
+Build!
+
+**Link to work:**
+
+Today's commit: [81402b5](https://github.com/sebkraemer/100-days-of-code/commit/81402b580ca06f3c05c80321dedb9fb3740a93f8)
+
+Project: [fints-go](./projects/fints-go) (This will contain more than I wrote today when you check it out later.)

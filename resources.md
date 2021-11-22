@@ -4,6 +4,9 @@
 
 ## Coding
 - https://golang.org/ref/spec
+- https://github.com/golang/go/wiki/CodeReviewComments
+- https://github.com/golang-standards/project-layout
+
 
 ## Articles
 1. [Join the #100DaysOfCode](https://medium.freecodecamp.com/join-the-100daysofcode-556ddb4579e4) freeCodeCamp Medium
