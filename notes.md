@@ -21,5 +21,5 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - Pointers chapter notices that the interface{} parameter needs a pointer and that this API pattern is used because of lack of generics. Generics being almost there, how does that compare? will e.g. the JSON.Unmarshal method change?
 
 # TODOs
-- I should experiment/revisit sub-slicing and changing slices in functions: modifying values, append()
 - Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.
+- revisit Interfaces chapter
