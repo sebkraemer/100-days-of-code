@@ -206,3 +206,30 @@ Build!
 Today's commit: [81402b5](https://github.com/sebkraemer/100-days-of-code/commit/81402b580ca06f3c05c80321dedb9fb3740a93f8)
 
 Project: [fints-go](./projects/fints-go) (This will contain more than I wrote today when you check it out later.)
+
+
+## Day 13
+
+November 23, 2021
+
+**Today's Progress**
+
+- *Learning Go* pages 161-170/340, starting *Errors* chapter
+- Playing with type and interface
+- Filing an errata on the book ☝️
+- ~~continued with fints-go~~
+
+**Thoughts**
+
+The Go parser from ANTKR needs some love, apparently there is generated AST visitor code but it's not as straightforward and easy to setup (and not as idiomatic?) in the Go version as for other languages.
+I had dabbled with it with python and JavaScript and also found there that the quality isn't on par with the Java version, which is the prime citizen, I believe. See e.g. [issue #1807](https://github.com/antlr/antlr4/pull/1807).
+
+Not sure what to make of it and how far I should take this project idea.
+
+I was happy to feel comfortable writing an interface and type switch case and type conversion on the playground. Don't even know what led me to do it, but please see [today's log](./day013) for the story.
+
+**Link to work:**
+
+- Today's commits: 
+- [day013](./day013)
+- Project: [fints-go](./projects/fints-go)

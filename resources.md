@@ -6,7 +6,11 @@
 - https://golang.org/ref/spec
 - https://github.com/golang/go/wiki/CodeReviewComments
 - https://github.com/golang-standards/project-layout
-
+- [Learning Go Errata](https://www.oreilly.com/catalog/errata.csp?isbn=0636920342373)
+- Types assertion, conversion (TODO from day 13):
+  - https://www.sohamkamani.com/golang/type-assertions-vs-type-conversions/
+  - https://go.dev/ref/spec#Type_assertions
+- http://www.golangbootcamp.com/book/exercises
 
 ## Articles
 1. [Join the #100DaysOfCode](https://medium.freecodecamp.com/join-the-100daysofcode-556ddb4579e4) freeCodeCamp Medium
