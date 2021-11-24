@@ -11,6 +11,7 @@
   - https://www.sohamkamani.com/golang/type-assertions-vs-type-conversions/
   - https://go.dev/ref/spec#Type_assertions
 - http://www.golangbootcamp.com/book/exercises
+- https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/
 
 ## Articles
 1. [Join the #100DaysOfCode](https://medium.freecodecamp.com/join-the-100daysofcode-556ddb4579e4) freeCodeCamp Medium
@@ -22,6 +23,7 @@
 # Additional Resources on the #100DaysOfCode
 
 ## Other resources
+1. 100daysofcode-golang with a nice diagram of different Golang topics/projects to cover: https://github.com/sahuvikramp/100daysofcode-golang
 1. [CodeNewbie - #100DaysOfCode Slack Channel](https://codenewbie.typeform.com/to/uwsWlZ)
 
 ## Books (both coding and non-coding)
