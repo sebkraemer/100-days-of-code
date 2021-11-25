@@ -1,5 +1,8 @@
-grammar fints;
+grammar FinTS;
 
+// options {
+// 	tokenVocab = FinTSLexerRules;
+// }
 
 nachrichtenkopf:
 	segmentkopf de_sep nachrichtengroesse de_sep hbciVersion de_sep dialogId de_sep
@@ -9,16 +12,6 @@ segmentkopf:
 	segmentkennung deg_sep segmentnummer deg_sep segmentversion (
 		deg_sep bezugssegment
 	)?;
-
-DT_AN:
-	FRAG_ENTWERTET_SYNTAXZEICHEN
-	| FRAG_ALPHANUMERISCH
-	| FRAG_SYNTAXZEICHEN;
-
-fragment FRAG_ALPHANUMERISCH: [A-Za-z0-9+:'?@];
-fragment FRAG_SYNTAXZEICHEN:
-	[!"#$%&()*+,\-./[\\\]^_]; // \x7B\x7D\xA7 fragment FRAG_ENTWERTET_SYNTAXZEICHEN: '?' [+:'?@];
-fragment FRAG_ENTWERTET_SYNTAXZEICHEN: '?' [+:'?@];
 
 segmentkennung: (DT_AN)+?;
 segmentnummer: (DT_AN)+?; // DT_num;

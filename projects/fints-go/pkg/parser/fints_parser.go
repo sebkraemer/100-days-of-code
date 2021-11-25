@@ -1,7 +1,6 @@
-// Code generated from /Users/sebi/src/100-days-of-code/projects/fints-go/antlr/fints.g4 by ANTLR 4.8. DO NOT EDIT.
+// Code generated from /Users/sebi/src/100-days-of-code/projects/fints-go/pkg/parser/FinTS.g4 by ANTLR 4.8. DO NOT EDIT.
 
-package parser // fints
-
+package parser // FinTS
 import (
 	"fmt"
 	"reflect"
@@ -80,12 +79,12 @@ func init() {
 	}
 }
 
-type fintsParser struct {
+type FinTSParser struct {
 	*antlr.BaseParser
 }
 
-func NewfintsParser(input antlr.TokenStream) *fintsParser {
-	this := new(fintsParser)
+func NewFinTSParser(input antlr.TokenStream) *FinTSParser {
+	this := new(FinTSParser)
 
 	this.BaseParser = antlr.NewBaseParser(input)
 
@@ -93,34 +92,34 @@ func NewfintsParser(input antlr.TokenStream) *fintsParser {
 	this.RuleNames = ruleNames
 	this.LiteralNames = literalNames
 	this.SymbolicNames = symbolicNames
-	this.GrammarFileName = "fints.g4"
+	this.GrammarFileName = "FinTS.g4"
 
 	return this
 }
 
-// fintsParser tokens.
+// FinTSParser tokens.
 const (
-	fintsParserEOF   = antlr.TokenEOF
-	fintsParserT__0  = 1
-	fintsParserT__1  = 2
-	fintsParserDT_AN = 3
+	FinTSParserEOF   = antlr.TokenEOF
+	FinTSParserT__0  = 1
+	FinTSParserT__1  = 2
+	FinTSParserDT_AN = 3
 )
 
-// fintsParser rules.
+// FinTSParser rules.
 const (
-	fintsParserRULE_nachrichtenkopf    = 0
-	fintsParserRULE_segmentkopf        = 1
-	fintsParserRULE_segmentkennung     = 2
-	fintsParserRULE_segmentnummer      = 3
-	fintsParserRULE_segmentversion     = 4
-	fintsParserRULE_bezugssegment      = 5
-	fintsParserRULE_nachrichtengroesse = 6
-	fintsParserRULE_hbciVersion        = 7
-	fintsParserRULE_dialogId           = 8
-	fintsParserRULE_nachrichtennummer  = 9
-	fintsParserRULE_bezugsnachricht    = 10
-	fintsParserRULE_de_sep             = 11
-	fintsParserRULE_deg_sep            = 12
+	FinTSParserRULE_nachrichtenkopf    = 0
+	FinTSParserRULE_segmentkopf        = 1
+	FinTSParserRULE_segmentkennung     = 2
+	FinTSParserRULE_segmentnummer      = 3
+	FinTSParserRULE_segmentversion     = 4
+	FinTSParserRULE_bezugssegment      = 5
+	FinTSParserRULE_nachrichtengroesse = 6
+	FinTSParserRULE_hbciVersion        = 7
+	FinTSParserRULE_dialogId           = 8
+	FinTSParserRULE_nachrichtennummer  = 9
+	FinTSParserRULE_bezugsnachricht    = 10
+	FinTSParserRULE_de_sep             = 11
+	FinTSParserRULE_deg_sep            = 12
 )
 
 // INachrichtenkopfContext is an interface to support dynamic dispatch.
@@ -142,7 +141,7 @@ type NachrichtenkopfContext struct {
 func NewEmptyNachrichtenkopfContext() *NachrichtenkopfContext {
 	var p = new(NachrichtenkopfContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_nachrichtenkopf
+	p.RuleIndex = FinTSParserRULE_nachrichtenkopf
 	return p
 }
 
@@ -154,7 +153,7 @@ func NewNachrichtenkopfContext(parser antlr.Parser, parent antlr.ParserRuleConte
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_nachrichtenkopf
+	p.RuleIndex = FinTSParserRULE_nachrichtenkopf
 
 	return p
 }
@@ -252,21 +251,9 @@ func (s *NachrichtenkopfContext) ToStringTree(ruleNames []string, recog antlr.Re
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *NachrichtenkopfContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterNachrichtenkopf(s)
-	}
-}
-
-func (s *NachrichtenkopfContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitNachrichtenkopf(s)
-	}
-}
-
 func (s *NachrichtenkopfContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitNachrichtenkopf(s)
 
 	default:
@@ -274,9 +261,9 @@ func (s *NachrichtenkopfContext) Accept(visitor antlr.ParseTreeVisitor) interfac
 	}
 }
 
-func (p *fintsParser) Nachrichtenkopf() (localctx INachrichtenkopfContext) {
+func (p *FinTSParser) Nachrichtenkopf() (localctx INachrichtenkopfContext) {
 	localctx = NewNachrichtenkopfContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 0, fintsParserRULE_nachrichtenkopf)
+	p.EnterRule(localctx, 0, FinTSParserRULE_nachrichtenkopf)
 	var _la int
 
 	defer func() {
@@ -336,7 +323,7 @@ func (p *fintsParser) Nachrichtenkopf() (localctx INachrichtenkopfContext) {
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
-	if _la == fintsParserT__0 {
+	if _la == FinTSParserT__0 {
 		{
 			p.SetState(35)
 			p.De_sep()
@@ -370,7 +357,7 @@ type SegmentkopfContext struct {
 func NewEmptySegmentkopfContext() *SegmentkopfContext {
 	var p = new(SegmentkopfContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_segmentkopf
+	p.RuleIndex = FinTSParserRULE_segmentkopf
 	return p
 }
 
@@ -382,7 +369,7 @@ func NewSegmentkopfContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_segmentkopf
+	p.RuleIndex = FinTSParserRULE_segmentkopf
 
 	return p
 }
@@ -460,21 +447,9 @@ func (s *SegmentkopfContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *SegmentkopfContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterSegmentkopf(s)
-	}
-}
-
-func (s *SegmentkopfContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitSegmentkopf(s)
-	}
-}
-
 func (s *SegmentkopfContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitSegmentkopf(s)
 
 	default:
@@ -482,9 +457,9 @@ func (s *SegmentkopfContext) Accept(visitor antlr.ParseTreeVisitor) interface{} 
 	}
 }
 
-func (p *fintsParser) Segmentkopf() (localctx ISegmentkopfContext) {
+func (p *FinTSParser) Segmentkopf() (localctx ISegmentkopfContext) {
 	localctx = NewSegmentkopfContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 2, fintsParserRULE_segmentkopf)
+	p.EnterRule(localctx, 2, FinTSParserRULE_segmentkopf)
 	var _la int
 
 	defer func() {
@@ -528,7 +503,7 @@ func (p *fintsParser) Segmentkopf() (localctx ISegmentkopfContext) {
 	p.GetErrorHandler().Sync(p)
 	_la = p.GetTokenStream().LA(1)
 
-	if _la == fintsParserT__1 {
+	if _la == FinTSParserT__1 {
 		{
 			p.SetState(45)
 			p.Deg_sep()
@@ -562,7 +537,7 @@ type SegmentkennungContext struct {
 func NewEmptySegmentkennungContext() *SegmentkennungContext {
 	var p = new(SegmentkennungContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_segmentkennung
+	p.RuleIndex = FinTSParserRULE_segmentkennung
 	return p
 }
 
@@ -574,7 +549,7 @@ func NewSegmentkennungContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_segmentkennung
+	p.RuleIndex = FinTSParserRULE_segmentkennung
 
 	return p
 }
@@ -582,11 +557,11 @@ func NewSegmentkennungContext(parser antlr.Parser, parent antlr.ParserRuleContex
 func (s *SegmentkennungContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *SegmentkennungContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *SegmentkennungContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *SegmentkennungContext) GetRuleContext() antlr.RuleContext {
@@ -597,21 +572,9 @@ func (s *SegmentkennungContext) ToStringTree(ruleNames []string, recog antlr.Rec
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *SegmentkennungContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterSegmentkennung(s)
-	}
-}
-
-func (s *SegmentkennungContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitSegmentkennung(s)
-	}
-}
-
 func (s *SegmentkennungContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitSegmentkennung(s)
 
 	default:
@@ -619,9 +582,9 @@ func (s *SegmentkennungContext) Accept(visitor antlr.ParseTreeVisitor) interface
 	}
 }
 
-func (p *fintsParser) Segmentkennung() (localctx ISegmentkennungContext) {
+func (p *FinTSParser) Segmentkennung() (localctx ISegmentkennungContext) {
 	localctx = NewSegmentkennungContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 4, fintsParserRULE_segmentkennung)
+	p.EnterRule(localctx, 4, FinTSParserRULE_segmentkennung)
 
 	defer func() {
 		p.ExitRule()
@@ -650,7 +613,7 @@ func (p *fintsParser) Segmentkennung() (localctx ISegmentkennungContext) {
 		case 1 + 1:
 			{
 				p.SetState(50)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -684,7 +647,7 @@ type SegmentnummerContext struct {
 func NewEmptySegmentnummerContext() *SegmentnummerContext {
 	var p = new(SegmentnummerContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_segmentnummer
+	p.RuleIndex = FinTSParserRULE_segmentnummer
 	return p
 }
 
@@ -696,7 +659,7 @@ func NewSegmentnummerContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_segmentnummer
+	p.RuleIndex = FinTSParserRULE_segmentnummer
 
 	return p
 }
@@ -704,11 +667,11 @@ func NewSegmentnummerContext(parser antlr.Parser, parent antlr.ParserRuleContext
 func (s *SegmentnummerContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *SegmentnummerContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *SegmentnummerContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *SegmentnummerContext) GetRuleContext() antlr.RuleContext {
@@ -719,21 +682,9 @@ func (s *SegmentnummerContext) ToStringTree(ruleNames []string, recog antlr.Reco
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *SegmentnummerContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterSegmentnummer(s)
-	}
-}
-
-func (s *SegmentnummerContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitSegmentnummer(s)
-	}
-}
-
 func (s *SegmentnummerContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitSegmentnummer(s)
 
 	default:
@@ -741,9 +692,9 @@ func (s *SegmentnummerContext) Accept(visitor antlr.ParseTreeVisitor) interface{
 	}
 }
 
-func (p *fintsParser) Segmentnummer() (localctx ISegmentnummerContext) {
+func (p *FinTSParser) Segmentnummer() (localctx ISegmentnummerContext) {
 	localctx = NewSegmentnummerContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 6, fintsParserRULE_segmentnummer)
+	p.EnterRule(localctx, 6, FinTSParserRULE_segmentnummer)
 
 	defer func() {
 		p.ExitRule()
@@ -772,7 +723,7 @@ func (p *fintsParser) Segmentnummer() (localctx ISegmentnummerContext) {
 		case 1 + 1:
 			{
 				p.SetState(55)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -806,7 +757,7 @@ type SegmentversionContext struct {
 func NewEmptySegmentversionContext() *SegmentversionContext {
 	var p = new(SegmentversionContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_segmentversion
+	p.RuleIndex = FinTSParserRULE_segmentversion
 	return p
 }
 
@@ -818,7 +769,7 @@ func NewSegmentversionContext(parser antlr.Parser, parent antlr.ParserRuleContex
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_segmentversion
+	p.RuleIndex = FinTSParserRULE_segmentversion
 
 	return p
 }
@@ -826,11 +777,11 @@ func NewSegmentversionContext(parser antlr.Parser, parent antlr.ParserRuleContex
 func (s *SegmentversionContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *SegmentversionContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *SegmentversionContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *SegmentversionContext) GetRuleContext() antlr.RuleContext {
@@ -841,21 +792,9 @@ func (s *SegmentversionContext) ToStringTree(ruleNames []string, recog antlr.Rec
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *SegmentversionContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterSegmentversion(s)
-	}
-}
-
-func (s *SegmentversionContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitSegmentversion(s)
-	}
-}
-
 func (s *SegmentversionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitSegmentversion(s)
 
 	default:
@@ -863,9 +802,9 @@ func (s *SegmentversionContext) Accept(visitor antlr.ParseTreeVisitor) interface
 	}
 }
 
-func (p *fintsParser) Segmentversion() (localctx ISegmentversionContext) {
+func (p *FinTSParser) Segmentversion() (localctx ISegmentversionContext) {
 	localctx = NewSegmentversionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 8, fintsParserRULE_segmentversion)
+	p.EnterRule(localctx, 8, FinTSParserRULE_segmentversion)
 
 	defer func() {
 		p.ExitRule()
@@ -894,7 +833,7 @@ func (p *fintsParser) Segmentversion() (localctx ISegmentversionContext) {
 		case 1 + 1:
 			{
 				p.SetState(60)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -928,7 +867,7 @@ type BezugssegmentContext struct {
 func NewEmptyBezugssegmentContext() *BezugssegmentContext {
 	var p = new(BezugssegmentContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_bezugssegment
+	p.RuleIndex = FinTSParserRULE_bezugssegment
 	return p
 }
 
@@ -940,7 +879,7 @@ func NewBezugssegmentContext(parser antlr.Parser, parent antlr.ParserRuleContext
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_bezugssegment
+	p.RuleIndex = FinTSParserRULE_bezugssegment
 
 	return p
 }
@@ -948,11 +887,11 @@ func NewBezugssegmentContext(parser antlr.Parser, parent antlr.ParserRuleContext
 func (s *BezugssegmentContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *BezugssegmentContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *BezugssegmentContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *BezugssegmentContext) GetRuleContext() antlr.RuleContext {
@@ -963,21 +902,9 @@ func (s *BezugssegmentContext) ToStringTree(ruleNames []string, recog antlr.Reco
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *BezugssegmentContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterBezugssegment(s)
-	}
-}
-
-func (s *BezugssegmentContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitBezugssegment(s)
-	}
-}
-
 func (s *BezugssegmentContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitBezugssegment(s)
 
 	default:
@@ -985,9 +912,9 @@ func (s *BezugssegmentContext) Accept(visitor antlr.ParseTreeVisitor) interface{
 	}
 }
 
-func (p *fintsParser) Bezugssegment() (localctx IBezugssegmentContext) {
+func (p *FinTSParser) Bezugssegment() (localctx IBezugssegmentContext) {
 	localctx = NewBezugssegmentContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 10, fintsParserRULE_bezugssegment)
+	p.EnterRule(localctx, 10, FinTSParserRULE_bezugssegment)
 
 	defer func() {
 		p.ExitRule()
@@ -1016,7 +943,7 @@ func (p *fintsParser) Bezugssegment() (localctx IBezugssegmentContext) {
 		case 1 + 1:
 			{
 				p.SetState(65)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -1050,7 +977,7 @@ type NachrichtengroesseContext struct {
 func NewEmptyNachrichtengroesseContext() *NachrichtengroesseContext {
 	var p = new(NachrichtengroesseContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_nachrichtengroesse
+	p.RuleIndex = FinTSParserRULE_nachrichtengroesse
 	return p
 }
 
@@ -1062,7 +989,7 @@ func NewNachrichtengroesseContext(parser antlr.Parser, parent antlr.ParserRuleCo
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_nachrichtengroesse
+	p.RuleIndex = FinTSParserRULE_nachrichtengroesse
 
 	return p
 }
@@ -1070,11 +997,11 @@ func NewNachrichtengroesseContext(parser antlr.Parser, parent antlr.ParserRuleCo
 func (s *NachrichtengroesseContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *NachrichtengroesseContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *NachrichtengroesseContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *NachrichtengroesseContext) GetRuleContext() antlr.RuleContext {
@@ -1085,21 +1012,9 @@ func (s *NachrichtengroesseContext) ToStringTree(ruleNames []string, recog antlr
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *NachrichtengroesseContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterNachrichtengroesse(s)
-	}
-}
-
-func (s *NachrichtengroesseContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitNachrichtengroesse(s)
-	}
-}
-
 func (s *NachrichtengroesseContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitNachrichtengroesse(s)
 
 	default:
@@ -1107,9 +1022,9 @@ func (s *NachrichtengroesseContext) Accept(visitor antlr.ParseTreeVisitor) inter
 	}
 }
 
-func (p *fintsParser) Nachrichtengroesse() (localctx INachrichtengroesseContext) {
+func (p *FinTSParser) Nachrichtengroesse() (localctx INachrichtengroesseContext) {
 	localctx = NewNachrichtengroesseContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 12, fintsParserRULE_nachrichtengroesse)
+	p.EnterRule(localctx, 12, FinTSParserRULE_nachrichtengroesse)
 
 	defer func() {
 		p.ExitRule()
@@ -1138,7 +1053,7 @@ func (p *fintsParser) Nachrichtengroesse() (localctx INachrichtengroesseContext)
 		case 1 + 1:
 			{
 				p.SetState(70)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -1172,7 +1087,7 @@ type HbciVersionContext struct {
 func NewEmptyHbciVersionContext() *HbciVersionContext {
 	var p = new(HbciVersionContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_hbciVersion
+	p.RuleIndex = FinTSParserRULE_hbciVersion
 	return p
 }
 
@@ -1184,7 +1099,7 @@ func NewHbciVersionContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_hbciVersion
+	p.RuleIndex = FinTSParserRULE_hbciVersion
 
 	return p
 }
@@ -1192,11 +1107,11 @@ func NewHbciVersionContext(parser antlr.Parser, parent antlr.ParserRuleContext, 
 func (s *HbciVersionContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *HbciVersionContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *HbciVersionContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *HbciVersionContext) GetRuleContext() antlr.RuleContext {
@@ -1207,21 +1122,9 @@ func (s *HbciVersionContext) ToStringTree(ruleNames []string, recog antlr.Recogn
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *HbciVersionContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterHbciVersion(s)
-	}
-}
-
-func (s *HbciVersionContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitHbciVersion(s)
-	}
-}
-
 func (s *HbciVersionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitHbciVersion(s)
 
 	default:
@@ -1229,9 +1132,9 @@ func (s *HbciVersionContext) Accept(visitor antlr.ParseTreeVisitor) interface{} 
 	}
 }
 
-func (p *fintsParser) HbciVersion() (localctx IHbciVersionContext) {
+func (p *FinTSParser) HbciVersion() (localctx IHbciVersionContext) {
 	localctx = NewHbciVersionContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 14, fintsParserRULE_hbciVersion)
+	p.EnterRule(localctx, 14, FinTSParserRULE_hbciVersion)
 
 	defer func() {
 		p.ExitRule()
@@ -1260,7 +1163,7 @@ func (p *fintsParser) HbciVersion() (localctx IHbciVersionContext) {
 		case 1 + 1:
 			{
 				p.SetState(75)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -1294,7 +1197,7 @@ type DialogIdContext struct {
 func NewEmptyDialogIdContext() *DialogIdContext {
 	var p = new(DialogIdContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_dialogId
+	p.RuleIndex = FinTSParserRULE_dialogId
 	return p
 }
 
@@ -1306,7 +1209,7 @@ func NewDialogIdContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_dialogId
+	p.RuleIndex = FinTSParserRULE_dialogId
 
 	return p
 }
@@ -1314,11 +1217,11 @@ func NewDialogIdContext(parser antlr.Parser, parent antlr.ParserRuleContext, inv
 func (s *DialogIdContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *DialogIdContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *DialogIdContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *DialogIdContext) GetRuleContext() antlr.RuleContext {
@@ -1329,21 +1232,9 @@ func (s *DialogIdContext) ToStringTree(ruleNames []string, recog antlr.Recognize
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *DialogIdContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterDialogId(s)
-	}
-}
-
-func (s *DialogIdContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitDialogId(s)
-	}
-}
-
 func (s *DialogIdContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitDialogId(s)
 
 	default:
@@ -1351,9 +1242,9 @@ func (s *DialogIdContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *fintsParser) DialogId() (localctx IDialogIdContext) {
+func (p *FinTSParser) DialogId() (localctx IDialogIdContext) {
 	localctx = NewDialogIdContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 16, fintsParserRULE_dialogId)
+	p.EnterRule(localctx, 16, FinTSParserRULE_dialogId)
 
 	defer func() {
 		p.ExitRule()
@@ -1382,7 +1273,7 @@ func (p *fintsParser) DialogId() (localctx IDialogIdContext) {
 		case 1 + 1:
 			{
 				p.SetState(80)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -1416,7 +1307,7 @@ type NachrichtennummerContext struct {
 func NewEmptyNachrichtennummerContext() *NachrichtennummerContext {
 	var p = new(NachrichtennummerContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_nachrichtennummer
+	p.RuleIndex = FinTSParserRULE_nachrichtennummer
 	return p
 }
 
@@ -1428,7 +1319,7 @@ func NewNachrichtennummerContext(parser antlr.Parser, parent antlr.ParserRuleCon
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_nachrichtennummer
+	p.RuleIndex = FinTSParserRULE_nachrichtennummer
 
 	return p
 }
@@ -1436,11 +1327,11 @@ func NewNachrichtennummerContext(parser antlr.Parser, parent antlr.ParserRuleCon
 func (s *NachrichtennummerContext) GetParser() antlr.Parser { return s.parser }
 
 func (s *NachrichtennummerContext) AllDT_AN() []antlr.TerminalNode {
-	return s.GetTokens(fintsParserDT_AN)
+	return s.GetTokens(FinTSParserDT_AN)
 }
 
 func (s *NachrichtennummerContext) DT_AN(i int) antlr.TerminalNode {
-	return s.GetToken(fintsParserDT_AN, i)
+	return s.GetToken(FinTSParserDT_AN, i)
 }
 
 func (s *NachrichtennummerContext) GetRuleContext() antlr.RuleContext {
@@ -1451,21 +1342,9 @@ func (s *NachrichtennummerContext) ToStringTree(ruleNames []string, recog antlr.
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *NachrichtennummerContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterNachrichtennummer(s)
-	}
-}
-
-func (s *NachrichtennummerContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitNachrichtennummer(s)
-	}
-}
-
 func (s *NachrichtennummerContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitNachrichtennummer(s)
 
 	default:
@@ -1473,9 +1352,9 @@ func (s *NachrichtennummerContext) Accept(visitor antlr.ParseTreeVisitor) interf
 	}
 }
 
-func (p *fintsParser) Nachrichtennummer() (localctx INachrichtennummerContext) {
+func (p *FinTSParser) Nachrichtennummer() (localctx INachrichtennummerContext) {
 	localctx = NewNachrichtennummerContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 18, fintsParserRULE_nachrichtennummer)
+	p.EnterRule(localctx, 18, FinTSParserRULE_nachrichtennummer)
 
 	defer func() {
 		p.ExitRule()
@@ -1504,7 +1383,7 @@ func (p *fintsParser) Nachrichtennummer() (localctx INachrichtennummerContext) {
 		case 1 + 1:
 			{
 				p.SetState(85)
-				p.Match(fintsParserDT_AN)
+				p.Match(FinTSParserDT_AN)
 			}
 
 		default:
@@ -1538,7 +1417,7 @@ type BezugsnachrichtContext struct {
 func NewEmptyBezugsnachrichtContext() *BezugsnachrichtContext {
 	var p = new(BezugsnachrichtContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_bezugsnachricht
+	p.RuleIndex = FinTSParserRULE_bezugsnachricht
 	return p
 }
 
@@ -1550,7 +1429,7 @@ func NewBezugsnachrichtContext(parser antlr.Parser, parent antlr.ParserRuleConte
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_bezugsnachricht
+	p.RuleIndex = FinTSParserRULE_bezugsnachricht
 
 	return p
 }
@@ -1595,21 +1474,9 @@ func (s *BezugsnachrichtContext) ToStringTree(ruleNames []string, recog antlr.Re
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *BezugsnachrichtContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterBezugsnachricht(s)
-	}
-}
-
-func (s *BezugsnachrichtContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitBezugsnachricht(s)
-	}
-}
-
 func (s *BezugsnachrichtContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitBezugsnachricht(s)
 
 	default:
@@ -1617,9 +1484,9 @@ func (s *BezugsnachrichtContext) Accept(visitor antlr.ParseTreeVisitor) interfac
 	}
 }
 
-func (p *fintsParser) Bezugsnachricht() (localctx IBezugsnachrichtContext) {
+func (p *FinTSParser) Bezugsnachricht() (localctx IBezugsnachrichtContext) {
 	localctx = NewBezugsnachrichtContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 20, fintsParserRULE_bezugsnachricht)
+	p.EnterRule(localctx, 20, FinTSParserRULE_bezugsnachricht)
 
 	defer func() {
 		p.ExitRule()
@@ -1673,7 +1540,7 @@ type De_sepContext struct {
 func NewEmptyDe_sepContext() *De_sepContext {
 	var p = new(De_sepContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_de_sep
+	p.RuleIndex = FinTSParserRULE_de_sep
 	return p
 }
 
@@ -1685,7 +1552,7 @@ func NewDe_sepContext(parser antlr.Parser, parent antlr.ParserRuleContext, invok
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_de_sep
+	p.RuleIndex = FinTSParserRULE_de_sep
 
 	return p
 }
@@ -1699,21 +1566,9 @@ func (s *De_sepContext) ToStringTree(ruleNames []string, recog antlr.Recognizer)
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *De_sepContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterDe_sep(s)
-	}
-}
-
-func (s *De_sepContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitDe_sep(s)
-	}
-}
-
 func (s *De_sepContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitDe_sep(s)
 
 	default:
@@ -1721,9 +1576,9 @@ func (s *De_sepContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *fintsParser) De_sep() (localctx IDe_sepContext) {
+func (p *FinTSParser) De_sep() (localctx IDe_sepContext) {
 	localctx = NewDe_sepContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 22, fintsParserRULE_de_sep)
+	p.EnterRule(localctx, 22, FinTSParserRULE_de_sep)
 
 	defer func() {
 		p.ExitRule()
@@ -1744,7 +1599,7 @@ func (p *fintsParser) De_sep() (localctx IDe_sepContext) {
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(94)
-		p.Match(fintsParserT__0)
+		p.Match(FinTSParserT__0)
 	}
 
 	return localctx
@@ -1769,7 +1624,7 @@ type Deg_sepContext struct {
 func NewEmptyDeg_sepContext() *Deg_sepContext {
 	var p = new(Deg_sepContext)
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(nil, -1)
-	p.RuleIndex = fintsParserRULE_deg_sep
+	p.RuleIndex = FinTSParserRULE_deg_sep
 	return p
 }
 
@@ -1781,7 +1636,7 @@ func NewDeg_sepContext(parser antlr.Parser, parent antlr.ParserRuleContext, invo
 	p.BaseParserRuleContext = antlr.NewBaseParserRuleContext(parent, invokingState)
 
 	p.parser = parser
-	p.RuleIndex = fintsParserRULE_deg_sep
+	p.RuleIndex = FinTSParserRULE_deg_sep
 
 	return p
 }
@@ -1795,21 +1650,9 @@ func (s *Deg_sepContext) ToStringTree(ruleNames []string, recog antlr.Recognizer
 	return antlr.TreesStringTree(s, ruleNames, recog)
 }
 
-func (s *Deg_sepContext) EnterRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.EnterDeg_sep(s)
-	}
-}
-
-func (s *Deg_sepContext) ExitRule(listener antlr.ParseTreeListener) {
-	if listenerT, ok := listener.(fintsListener); ok {
-		listenerT.ExitDeg_sep(s)
-	}
-}
-
 func (s *Deg_sepContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	switch t := visitor.(type) {
-	case fintsVisitor:
+	case FinTSVisitor:
 		return t.VisitDeg_sep(s)
 
 	default:
@@ -1817,9 +1660,9 @@ func (s *Deg_sepContext) Accept(visitor antlr.ParseTreeVisitor) interface{} {
 	}
 }
 
-func (p *fintsParser) Deg_sep() (localctx IDeg_sepContext) {
+func (p *FinTSParser) Deg_sep() (localctx IDeg_sepContext) {
 	localctx = NewDeg_sepContext(p, p.GetParserRuleContext(), p.GetState())
-	p.EnterRule(localctx, 24, fintsParserRULE_deg_sep)
+	p.EnterRule(localctx, 24, FinTSParserRULE_deg_sep)
 
 	defer func() {
 		p.ExitRule()
@@ -1840,7 +1683,7 @@ func (p *fintsParser) Deg_sep() (localctx IDeg_sepContext) {
 	p.EnterOuterAlt(localctx, 1)
 	{
 		p.SetState(96)
-		p.Match(fintsParserT__1)
+		p.Match(FinTSParserT__1)
 	}
 
 	return localctx
