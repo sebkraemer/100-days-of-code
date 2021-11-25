@@ -23,3 +23,4 @@ automatically add/remote modules to go.mod: `go mod tidy`
 # TODOs
 - Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.
 - revisit Interfaces chapter
+- `go generate`

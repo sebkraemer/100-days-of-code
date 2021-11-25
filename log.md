@@ -230,6 +230,52 @@ I was happy to feel comfortable writing an interface and type switch case and ty
 
 **Link to work:**
 
-- Today's commits: 
+Today's commits: 
 - [day013](./day013)
+- Project: [fints-go](./projects/fints-go)
+
+
+## Day 14
+
+November 24, 2021
+
+**Today's Progress**
+
+- *Learning Go* pages 171-202/340, finishing Errors chapter and also completing Packaging chapter. 📖
+
+**Thoughts**
+
+No new flash cards and no coding but I hope this does count anyway..
+
+Next up: Concurrency! 🤩  In a way I'm of course looking forward to it, on the other hand I feed it's not the most important thing to cover next..
+
+
+## Day 15
+
+November 25, 2021
+
+**Today's Progress**
+
+- had to create a few flash cards, I'm running out of reviews soon
+- picked up the fints-go idea and made the project compile
+
+**Thoughts**
+
+For getting the project to build, I had to fight a bit with local package dependency; in the end I successfully used `replace()` in my `go.mod` 😀 (The book mentions `replace` but unfortunately doesn't explain it further.)
+
+```go.mod
+replace (
+   github.com/sebkraemer/100-days-of-code/projects/fints-go/pkg/parser => ./pkg/parser
+)
+```
+
+Going further, I did notice that the Go ANTLR target, at least the visitor implementation I intended to use, has bigger problems than anticipated (see [here](https://github.com/antlr/antlr4/issues/2504) and extensive comments [here](https://github.com/antlr/antlr4/pull/1841#pullrequestreview-66582914)) and I'm not sure I want to go down that path. I could still try to come up with a POC but reimplementing every base method is not feasable for a grammar that will grow large quickly, and the FinTS one would. An example of someone who made the effort for a simple calulator (minum set of rules) can be seen [here](https://github.com/DavidGamba/go-antlr-calc).
+
+Using SomeType.New() object creation seems to be a thing.
+
+Have to look up `go generate`.
+
+**Link to work:**
+
+- Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/8ca9d1dfdd5c77bfc287f1cb6b2598956772b64a
 - Project: [fints-go](./projects/fints-go)
