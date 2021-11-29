@@ -13,6 +13,7 @@
 - http://www.golangbootcamp.com/book/exercises
 - https://astaxie.gitbooks.io/build-web-application-with-golang/content/en/
 - How Do You Structure Your Go Apps talk: https://oreil.ly/OzHY4 
+- http://tmrts.com/go-patterns/
 
 ## TODO revisit
 - https://twitter.com/AndyHaskell2013/status/1369359640849448967?s=20
