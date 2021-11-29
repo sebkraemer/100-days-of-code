@@ -279,3 +279,60 @@ Have to look up `go generate`.
 
 - Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/8ca9d1dfdd5c77bfc287f1cb6b2598956772b64a
 - Project: [fints-go](./projects/fints-go)
+
+
+## Day 16
+
+November 26, 2021
+
+**Today's Progress**
+
+- Started sudoku solving project but got a bit stuck in the early stage. Better progress next time! 🤞
+
+
+## Day 17
+
+November 26, 2021
+
+**Today's Progress**
+
+- ❌ no coding today 🤭
+
+- ✅ spent the whole evening with my wife 😇
+
+- Started chapter about standard library and had a brief look at backtracking.
+
+
+## Day 18
+
+November 28, 2021
+
+**Today's Non-Progress**
+
+intentionally left blank
+
+
+## Day 19
+
+November 29, 2021
+
+**Today's Progress**
+
+- continued on sudoku
+- early stage: print support, test layout assumptions
+- used stringer interface for printing support
+- used strings.Builder
+- inspected array memory layout (row major, of course, like in C 🙂)
+
+**Thoughts**
+
+After a break, coding was fun and I feel motivated with some things in mind where to go with this toy project.
+
+Implementing String() made me realize what I already knew: It has nothing to do with operator overloading, which go does not support.
+I believe that would be against the philosophy of Go that things should not be hidden or obfuscated, even if that means more code.
+This does not mean that odules like `fmt` can't use whatever mechanism (reflection?) to check for an interface and handle things comfortably.
+
+**Link to work:**
+
+- Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/b4806f9491889806f2d8bb29d726765ce8118564
+- Project: [sudoku-go](./projects/sudoku-go)
