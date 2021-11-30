@@ -336,3 +336,23 @@ This does not mean that odules like `fmt` can't use whatever mechanism (reflecti
 
 - Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/b4806f9491889806f2d8bb29d726765ce8118564
 - Project: [sudoku-go](./projects/sudoku-go)
+
+
+## Day 20
+
+November 30, 2021
+
+**Today's Progress**
+
+- finished first version of backtracking sudoku solver, it solved an example sudoku ✅
+
+**Thoughts**
+
+- Finally implemented this. Had backtracking on my list for too long!
+- The mix of bool and error type which I started with felt weird for the helper functions and recursion results; ended up with bools only.
+- Stringer interface does only work with `fmt` if fields are not exported!
+
+**Link to work:**
+
+- Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/11125a10752a101371b78d03c1050482e6bbbc5a
+- Project: [sudoku-go](./projects/sudoku-go) with updated README
