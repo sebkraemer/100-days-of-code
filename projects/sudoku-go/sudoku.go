@@ -45,7 +45,7 @@ type SudokuBoard struct {
 //     if !successful, remove digit and try another
 // if all digits have been tried and nothing worked, return false to trigger backtracking
 func (sf *SudokuBoard) solve() bool {
-	fmt.Println(sf.data)
+	//fmt.Println(sf.data)
 
 	r, c, avail := sf.getNextAvailable()
 	if !avail {
