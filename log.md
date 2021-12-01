@@ -356,3 +356,24 @@ November 30, 2021
 
 - Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/11125a10752a101371b78d03c1050482e6bbbc5a
 - Project: [sudoku-go](./projects/sudoku-go) with updated README
+
+
+## Day 21
+
+December 1, 2021
+
+**Today's Progress**
+
+- Couldn't resist and started the testing chapter
+- turned a sudoku test into a benchmark test
+- flash-carded the benchmark section
+
+**Thoughts**
+
+I don't see a good way to have code written both for a test and a benchmark without code duplication or extracting into a yet another function. I feel that the latter would hurt readibility, but maybe it doesn't.
+
+**Link to work:**
+
+- Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/621ec13634d1fa72727b2d7e8dc284df990e9ebf with benchmark output
+- Project: [sudoku-go](./projects/sudoku-go)
+
