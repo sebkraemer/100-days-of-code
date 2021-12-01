@@ -32,8 +32,8 @@ func TestString(t *testing.T) {
 
 }
 
-func Test_solve(t *testing.T) {
-	field := SudokuBoard{
+func Benchmark_solve(t *testing.B) {
+	template := SudokuBoard{
 		data: [N][N]int{{3, 0, 6, 5, 0, 8, 4, 0, 0},
 			{5, 2, 0, 0, 0, 0, 0, 0, 0},
 			{0, 8, 7, 0, 0, 0, 0, 3, 1},
@@ -45,13 +45,16 @@ func Test_solve(t *testing.T) {
 			{0, 0, 5, 2, 0, 6, 3, 0, 0}},
 	}
 
-	solved := field.solve()
+	for i := 0; i < t.N; i++ {
+		field := template // fresh copy
 
-	if !solved {
-		t.Error("solve() returned false")
-	}
+		solved := field.solve()
 
-	expected := `3 1 6 5 7 8 4 9 2
+		if !solved {
+			t.Error("solve() returned false")
+		}
+
+		expected := `3 1 6 5 7 8 4 9 2
 5 2 9 1 3 4 7 6 8
 4 8 7 6 2 9 5 3 1
 2 6 3 4 1 5 9 8 7
@@ -61,8 +64,9 @@ func Test_solve(t *testing.T) {
 6 9 2 3 5 1 8 7 4
 7 4 5 2 8 6 3 1 9`
 
-	got := field.String()
-	if field.String() != expected {
-		t.Errorf("solved board unexpected, expected\n%s\ngot\n%s", expected, got)
+		got := field.String()
+		if field.String() != expected {
+			t.Errorf("solved board unexpected, expected\n%s\ngot\n%s", expected, got)
+		}
 	}
 }
