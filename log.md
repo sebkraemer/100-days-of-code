@@ -380,7 +380,7 @@ I don't see a good way to have code written both for a test and a benchmark with
 
 ## Day 22
 
-December 3, 2021
+December 2, 2021
 
 **Today's Progress**
 
@@ -399,3 +399,24 @@ It felt good to create new cards and work with the book again. While it feels a 
 - Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/621ec13634d1fa72727b2d7e8dc284df990e9ebf with benchmark output
 - Project: [sudoku-go](./projects/sudoku-go)
 
+
+## Day 23
+
+December 3, 2021
+
+**Today's Progress**
+
+- Started looking into web services with go and implemented a *hello world* for you guys.
+- Also peeked into AWS Lambda as a candidate for future serving my sudoko solver but I concluded quickly that this is a larger topic on its own.
+  I consider it as a serverless option for the soduko solver.
+
+**Thoughts**
+
+It appears I've gotten used to put the opening curly brace on the same line as the introductory declaration.
+
+It's just fascinating how easy it is to ramp up a webservice in Go (coming from C++, that is)
+
+**Link to work:**
+
+- Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/232c7d9a3f99050f852c86e242bd56913fed4d58
+- Project: [day023](./day023)
