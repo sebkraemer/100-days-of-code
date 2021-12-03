@@ -377,3 +377,25 @@ I don't see a good way to have code written both for a test and a benchmark with
 - Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/621ec13634d1fa72727b2d7e8dc284df990e9ebf with benchmark output
 - Project: [sudoku-go](./projects/sudoku-go)
 
+
+## Day 22
+
+December 3, 2021
+
+**Today's Progress**
+
+- Revisiting modules and flash-carding
+- Finally understood Minimal Version Selection 🎯 after reading a great article by @goinggodotnet, the example in the book had me confused.
+  https://t.co/kJoulWbWN1
+
+no code to share today, sorry
+
+**Thoughts**
+
+It felt good to create new cards and work with the book again. While it feels a bit wrong to skip on the coding/practical side, I notice that I'm writing down stuff on cards for repetition that I had read but rather forgotten the specifics about.
+
+**Link to work:**
+
+- Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/621ec13634d1fa72727b2d7e8dc284df990e9ebf with benchmark output
+- Project: [sudoku-go](./projects/sudoku-go)
+
