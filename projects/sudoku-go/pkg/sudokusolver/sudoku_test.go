@@ -1,10 +1,10 @@
-package main
+package sudokusolver
 
 import "testing"
 
 func TestString(t *testing.T) {
 	sb := SudokuBoard{
-		data: [N][N]int{{1, 2, 3, 4, 5, 6, 7, 8, 9},
+		Data: [N][N]int{{1, 2, 3, 4, 5, 6, 7, 8, 9},
 			{3, 4, 5, 6, 7, 8, 9, 0, 1},
 			{5, 6, 7, 8, 9, 0, 1, 2, 3},
 			{7, 8, 9, 0, 1, 2, 3, 4, 5},
@@ -32,9 +32,9 @@ func TestString(t *testing.T) {
 
 }
 
-func Benchmark_solve(t *testing.B) {
+func Benchmark_Solve(t *testing.B) {
 	template := SudokuBoard{
-		data: [N][N]int{{3, 0, 6, 5, 0, 8, 4, 0, 0},
+		Data: [N][N]int{{3, 0, 6, 5, 0, 8, 4, 0, 0},
 			{5, 2, 0, 0, 0, 0, 0, 0, 0},
 			{0, 8, 7, 0, 0, 0, 0, 3, 1},
 			{0, 0, 3, 0, 1, 0, 0, 8, 0},
@@ -48,7 +48,7 @@ func Benchmark_solve(t *testing.B) {
 	for i := 0; i < t.N; i++ {
 		field := template // fresh copy
 
-		solved := field.solve()
+		solved := field.Solve()
 
 		if !solved {
 			t.Error("solve() returned false")

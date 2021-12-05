@@ -23,7 +23,7 @@ Code is inspired by lecture notes authored by @juliezelenski. Googling for the s
 # Working example
 
 ```
-% go run sudoku.go
+% go run sudoku.go # moved to cmd/
 3 0 6 5 0 8 4 0 0
 5 2 0 0 0 0 0 0 0
 0 8 7 0 0 0 0 3 1
