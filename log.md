@@ -439,6 +439,8 @@ I felt comfortable to write the Go code.
 
 The project used local packages which seemed pretty straightforward. I wonder if my approach was too complicated, and maybe I misunderstood the best practices.
 
+It's interesting to note that passing an interface as parameter can include (is always) pointer type although it does not look like it in the parameter list (concrete example: `http.ResponseWriter`).
+
 **Link to work:**
 - Commits: https://github.com/sebkraemer/golang-fifa-world-cup-web-service/commits/3b068f9f1c43ce0d8204faf7cc9c3f74010389aa
 - Project: [golang-fifa-world-cup-web-service@3b068f9 submodule](./projects/)
