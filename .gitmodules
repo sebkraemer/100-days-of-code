@@ -1,0 +1,3 @@
+[submodule "projects/golang-fifa-world-cup-web-service"]
+	path = projects/golang-fifa-world-cup-web-service
+	url = ../golang-fifa-world-cup-web-service

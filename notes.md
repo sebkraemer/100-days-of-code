@@ -24,3 +24,4 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.
 - revisit Interfaces chapter
 - `go generate`
+- local packages OK after all? (ref. `./projects/golang-fifa-world-cup-web-service`)

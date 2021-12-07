@@ -420,3 +420,25 @@ It's just fascinating how easy it is to ramp up a webservice in Go (coming from 
 
 - Today's commits: https://github.com/sebkraemer/100-days-of-code/commit/232c7d9a3f99050f852c86e242bd56913fed4d58
 - Project: [day023](./day023)
+
+
+## Day 27
+
+December 7, 2021
+
+**Today's Progress**
+
+- Took the @pluralsight lab "Build a FIFA World Cup Web Service in Go"
+  (which sounds like quite more work than it was)
+
+**Thoughts**
+
+The project was in a way too easy because it dictated what to write. Still, I got a good impression on how to write
+the handlers. Also, there is http request testing code which I can use for my own future service tests.
+I felt comfortable to write the Go code.
+
+The project used local packages which seemed pretty straightforward. I wonder if my approach was too complicated, and maybe I misunderstood the best practices.
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/golang-fifa-world-cup-web-service/commits/3b068f9f1c43ce0d8204faf7cc9c3f74010389aa
+- Project: [golang-fifa-world-cup-web-service@3b068f9 submodule](./projects/)
