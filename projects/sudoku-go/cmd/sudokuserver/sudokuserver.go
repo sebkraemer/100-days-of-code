@@ -3,10 +3,19 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
 	"net/http"
 
 	"github.com/sebkraemer/100-days-of-code/projects/sudoku-go/pkg/sudokusolver"
 )
+
+func GetSolveHandler(res http.ResponseWriter, req *http.Request) {
+	payload, err := ioutil.ReadAll(req.Body)
+	if err == nil {
+		fmt.Printf("%v", payload)
+	}
+	res.WriteHeader(http.StatusInternalServerError) // not implemented as head
+}
 
 func main() {
 	//field := SudokuBoard{} // fails or runs forever with empty board?
