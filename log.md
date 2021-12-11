@@ -444,3 +444,23 @@ It's interesting to note that passing an interface as parameter can include (is 
 **Link to work:**
 - Commits: https://github.com/sebkraemer/golang-fifa-world-cup-web-service/commits/3b068f9f1c43ce0d8204faf7cc9c3f74010389aa
 - Project: [golang-fifa-world-cup-web-service@3b068f9 submodule](./projects/)
+
+
+## Day 31
+
+December 7, 2021
+
+**Today's Progress**
+
+- Implemented the HTTP request handler to make checks and process the input, i.e., solving and returning the solved sudoku data
+
+**Thoughts**
+
+Feels good to code and when tests turn green ✅
+Wonder how to architest the whole web service application, incl logging and mature muxer, HTTP API design..
+The Reader interface of request body and json decoder, things are falling into place.
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/9b003b3b14307572de1a94b2fc2c8b9a56cdb7b6
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+
