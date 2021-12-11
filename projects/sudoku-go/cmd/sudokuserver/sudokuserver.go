@@ -3,18 +3,51 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 
 	"github.com/sebkraemer/100-days-of-code/projects/sudoku-go/pkg/sudokusolver"
 )
 
 func GetSolveHandler(res http.ResponseWriter, req *http.Request) {
-	payload, err := ioutil.ReadAll(req.Body)
-	if err == nil {
-		fmt.Printf("%v", payload)
+	if req.URL.Path != "/solve" {
+		res.WriteHeader(http.StatusNotFound)
+		// todo add HATEOAS
+		return
 	}
-	res.WriteHeader(http.StatusInternalServerError) // not implemented as head
+	if req.Body == nil {
+		res.WriteHeader(http.StatusBadRequest)
+		res.Write([]byte("no data"))
+		return
+	}
+	if req.Method != http.MethodGet {
+		res.WriteHeader(http.StatusMethodNotAllowed)
+		// todo add HATEOAS
+		return
+	}
+	var board sudokusolver.SudokuBoard
+	err := json.NewDecoder(req.Body).Decode(&board)
+	if err != nil {
+		fmt.Printf("ERROR %v", err)            // log error
+		res.WriteHeader(http.StatusBadRequest) // not implemented as head
+		res.Write([]byte("could not decode your data"))
+		return
+	}
+
+	solved := board.Solve()
+	if !solved {
+		// ? solver is too stupid to check if it cannot solve a board
+		// and the API is not able to return a specific error
+		// with current implementation, the solver could try forever on a wrong crafted input
+		// so we assume that the input was ok and we failed some other way, just for sake of this project example
+		res.WriteHeader(http.StatusInternalServerError) // not implemented as head
+		res.Write([]byte("could not solve your riddle, sorry"))
+	}
+	resBody, err := json.Marshal(board)
+	if err != nil {
+		res.WriteHeader(http.StatusInternalServerError) // not implemented as head
+		res.Write([]byte(fmt.Sprintf("could not marshal computation result, this should not happen! result: %v", board)))
+	}
+	res.Write(resBody)
 }
 
 func main() {
