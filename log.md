@@ -448,7 +448,7 @@ It's interesting to note that passing an interface as parameter can include (is 
 
 ## Day 31
 
-December 7, 2021
+December 11, 2021
 
 **Today's Progress**
 
@@ -462,5 +462,31 @@ The Reader interface of request body and json decoder, things are falling into p
 
 **Link to work:**
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/9b003b3b14307572de1a94b2fc2c8b9a56cdb7b6
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+
+
+## Day 32
+
+December 12, 2021
+
+**Today's Progress**
+
+- Pluralsight course *Creating Web Services with Go* by @AlexCSchultz
+
+
+**Thoughts**
+
+Two ways to start the http server:
+- 'static'
+  - http.Handler(...)
+  - http.ListenAndServer(port, muxer=nil)
+- custom with more control
+  - s := http.Server{.., Handler: FooHandler{}}
+  - s.ListenAndServer()
+
+I should download and review th course source code, I wondered that one place where the handler was passed as `&handler` (I think), why was it done this way?
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/ec98da5da2743b55fccddc2b297b187bb96d099c
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
