@@ -50,33 +50,18 @@ func GetSolveHandler(res http.ResponseWriter, req *http.Request) {
 	res.Write(resBody)
 }
 
+type handler struct{}
+
+func (h handler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
+	GetSolveHandler(w, req)
+}
+
 func main() {
-	//field := SudokuBoard{} // fails or runs forever with empty board?
-	field := sudokusolver.SudokuBoard{
-		Data: [sudokusolver.N][sudokusolver.N]int{{3, 0, 6, 5, 0, 8, 4, 0, 0},
-			{5, 2, 0, 0, 0, 0, 0, 0, 0},
-			{0, 8, 7, 0, 0, 0, 0, 3, 1},
-			{0, 0, 3, 0, 1, 0, 0, 8, 0},
-			{9, 0, 0, 8, 6, 3, 0, 0, 5},
-			{0, 5, 0, 0, 9, 0, 6, 0, 0},
-			{1, 3, 0, 0, 0, 0, 2, 5, 0},
-			{0, 0, 0, 0, 0, 0, 0, 7, 4},
-			{0, 0, 5, 2, 0, 6, 3, 0, 0}},
+
+	server := http.Server{
+		Addr:    ":8080",
+		Handler: handler{},
 	}
 
-	fmt.Printf("%s\n", field.String())
-	solved := field.Solve()
-	fmt.Printf("solved: %t\n%s\n", solved, field.String())
-
-	asBytes, err := json.Marshal(field.Data)
-	if err != nil {
-		fmt.Errorf("could not marshal solved sudoku data")
-	}
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write(asBytes)
-	})
-	err = http.ListenAndServe(":5000", nil)
-	if err != nil {
-		fmt.Errorf("%w", err)
-	}
+	fmt.Println(server.ListenAndServe())
 }

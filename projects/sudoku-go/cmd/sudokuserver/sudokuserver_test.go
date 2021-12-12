@@ -8,7 +8,7 @@ import (
 	"testing"
 )
 
-// these could probably go into a data driven table test
+// todo adapt test to run on against server
 
 // instead of giving same handler I should probably put them into a muxer and test that one or the whole server
 
