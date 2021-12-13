@@ -1,6 +1,8 @@
 package main
 
 import (
+	"bytes"
+	"io"
 	"io/ioutil"
 	"net/http"
 	"net/http/httptest"
@@ -8,17 +10,42 @@ import (
 	"testing"
 )
 
-// todo adapt test to run on against server
+func TestGetSolveHandler(t *testing.T) {
+	cases := []struct {
+		testName       string
+		clientMethod   string
+		clientUri      string
+		clientBody     io.Reader
+		expectedStatus int
+		expectedBody   *bytes.Buffer
+	}{
+		{"empty request", http.MethodGet, "/solve", nil, http.StatusBadRequest, bytes.NewBufferString("no data")},
+		{"no root handler", http.MethodGet, "/", nil, http.StatusNotFound, nil},
+	}
+	for _, test := range cases {
+		t.Run(test.testName, func(t *testing.T) {
+			handler := http.HandlerFunc(GetSolveHandler)
+			rr := httptest.NewRecorder()
+			req, _ := http.NewRequest(test.clientMethod, test.clientUri, test.clientBody)
+			handler.ServeHTTP(rr, req)
 
-// instead of giving same handler I should probably put them into a muxer and test that one or the whole server
+			if got, expected := rr.Code, test.expectedStatus; got != expected {
+				t.Errorf("status mismatch: got %d, expected %d", got, expected)
+			}
 
-func TestGetSolveHandlerReturnsStatusBadRequest(t *testing.T) {
-	handler := http.HandlerFunc(GetSolveHandler)
-	rr := httptest.NewRecorder()
-	req, _ := http.NewRequest(http.MethodGet, "/solve", nil)
-	handler.ServeHTTP(rr, req)
-	if status := rr.Code; status != http.StatusBadRequest {
-		t.Error("Did not return status 400 - Bad Request")
+			var resBody []byte
+			var expectedBody []byte
+			if rr.Body != nil {
+				resBody, _ = ioutil.ReadAll(rr.Body)
+			}
+			if test.expectedBody != nil {
+				expectedBody, _ = ioutil.ReadAll(test.expectedBody)
+			}
+
+			if !bytes.Equal(resBody, expectedBody) {
+				t.Errorf("response body mismatch, got %v, expected %v", resBody, expectedBody)
+			}
+		})
 	}
 }
 
@@ -30,16 +57,6 @@ func TestGetSolveHandlerReturnsStatusBadRequestInvalidData(t *testing.T) {
 	handler.ServeHTTP(rr, req)
 	if status := rr.Code; status != http.StatusBadRequest {
 		t.Errorf("Did not return status 400 - Bad Request, returned %d instead", status)
-	}
-}
-
-func TestGetSolveHandlerReturnsStatusNotFound(t *testing.T) {
-	handler := http.HandlerFunc(GetSolveHandler)
-	rr := httptest.NewRecorder()
-	req, _ := http.NewRequest(http.MethodGet, "/notsolve", nil)
-	handler.ServeHTTP(rr, req)
-	if status := rr.Code; status != http.StatusNotFound {
-		t.Error("Did not return status 404 - Not Found")
 	}
 }
 
