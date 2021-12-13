@@ -490,3 +490,25 @@ I should download and review th course source code, I wondered that one place wh
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/ec98da5da2743b55fccddc2b297b187bb96d099c
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
+
+## Day 33
+
+December 13, 2021
+
+**Today's Progress**
+
+- Converted some handler tests to table tests format
+- Produced fresh cards
+- Some random topic reading, making notes for several things to get back to later.
+
+**Thoughts**
+
+- I somehow confused httptest.NewServer as something I could use but I didn't need to simulate the server.
+- Happy that VS Code supports table tests out of the box.
+- Various specific notes were floating around my head, made notes and read spec and blogs. Things to come back to later.
+- Surprisingly learned the debug console and watch feature in the "Getting Started" VS Code youtube video.
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/0850530ae0edc296eedc9308ad9cf8bf371605e0
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+

@@ -19,9 +19,30 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - on what types does the for range loop work?
 - iterating over map is not deterministic (anti hash DOS mechanism), but fmt.Print print it sorted. how? is it possible without getting and sorting all values first?
 - Pointers chapter notices that the interface{} parameter needs a pointer and that this API pattern is used because of lack of generics. Generics being almost there, how does that compare? will e.g. the JSON.Unmarshal method change?
+- what does & really do, always create a type on the heap? heap vs stack not explicitly mentioned in spec
+- when exaclty does import execute anything from a package?
 
 # TODOs
 - Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.
 - revisit Interfaces chapter
 - `go generate`
 - local packages OK after all? (ref. `./projects/golang-fifa-world-cup-web-service`)
+- (....) (I missed to note a few items, I'm sure..)
+- example on page 235 (learning go), could that be changed into returning a ReadCloser?
+- `retract` keyword is not mentioned in learning Go!
+- read up on bytes.Buffer
+
+
+# Quiz ideas
+- difference zero value and default value (none?)
+- different initializations of e.g. map or slice, when nil, when not?
+- monotonic time vs. wall clock time, different handling in time.Time when e.g. captured with time.Now(), difference in calculation (because of time zone handling?) (time in io chapter)
+- go implicit conversion with interface?
+- execution of defer and capturing
+  - https://stackoverflow.com/a/53219947
+  - https://go.dev/ref/spec#Defer_statements
+  - what's the difference between invoking and executing a function? (both words are used in spec when describing defer())
+- `retract` keyword is not mentioned in learning Go as it's rather new
+- var a = 10; pa := &a, what type is pa?
+- difference !bytes.Equal() vs bytes.Compare(), linter told me to use the first
+-
