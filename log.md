@@ -513,3 +513,37 @@ December 13, 2021
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/0850530ae0edc296eedc9308ad9cf8bf371605e0
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
+
+## Day 34
+
+*TODO, get note from twitter*
+
+
+## Day 34
+
+*TODO, get note from twitter*
+
+
+## Day 36
+
+December 16, 2021
+
+**Today's Progress**
+
+- Learned about using environment variables inside Go program.
+- Learned about crossplatform Go builds with GOOS and GOARCH.
+- Learned about Docker multiplatform builds, didn't know that.
+
+**Thoughts**
+
+Couldn't really follow the course regarding the multiplatform docker build because I couldn't get the `buildx` command running with my brewed docker and minikube.
+Not saying it's not possible but it's not my focus right now.
+It's a bit sad though and probably mainly a konsequence of not having Docker Desktop.
+Should I switch to my (kind of neglected) Linux system?
+
+Multi-platform docker gets me in the mood to try that on my (also neglected Raspberry Pi! 😁
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/2736c3edeed9f533ff4bbc7ca26f18fdd0e5b719
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+
