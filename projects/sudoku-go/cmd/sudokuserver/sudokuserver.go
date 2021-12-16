@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
+	"os"
 
 	"github.com/sebkraemer/100-days-of-code/projects/sudoku-go/pkg/sudokusolver"
 )
@@ -58,8 +59,14 @@ func (h handler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 
 func main() {
 
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8080"
+	}
+	fmt.Printf("Starting sudoku server on port %v.\n", port)
+
 	server := http.Server{
-		Addr:    ":8080",
+		Addr:    ":" + port,
 		Handler: handler{},
 	}
 

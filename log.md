@@ -500,6 +500,7 @@ December 13, 2021
 - Converted some handler tests to table tests format
 - Produced fresh cards
 - Some random topic reading, making notes for several things to get back to later.
+- buffer, reader, strings usage
 
 **Thoughts**
 

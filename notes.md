@@ -45,4 +45,4 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - `retract` keyword is not mentioned in learning Go as it's rather new
 - var a = 10; pa := &a, what type is pa?
 - difference !bytes.Equal() vs bytes.Compare(), linter told me to use the first
--
+- encoding of zero value struct, zero value slice/map, zero size slice/map
