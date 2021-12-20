@@ -5,6 +5,9 @@ import (
 	"fmt"
 	"net/http"
 	"os"
+	"strconv"
+
+	"github.com/sebkraemer/100-days-of-code/projects/sudoku-go/cmd/sudokuserver/logging"
 
 	"github.com/sebkraemer/100-days-of-code/projects/sudoku-go/pkg/sudokusolver"
 )
@@ -57,18 +60,29 @@ func (h handler) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	GetSolveHandler(w, req)
 }
 
-func main() {
+func logMap(s string, v interface{}) map[string]interface{} {
+	return map[string]interface{}{s: v}
+}
 
-	port := os.Getenv("PORT")
-	if port == "" {
-		port = "8080"
+func main() {
+	logging.SetupLogging()
+
+	portStr := os.Getenv("PORT")
+	if portStr == "" {
+		portStr = "8080"
 	}
-	fmt.Printf("Starting sudoku server on port %v.\n", port)
 
 	server := http.Server{
-		Addr:    ":" + port,
+		Addr:    ":" + portStr,
 		Handler: handler{},
 	}
 
-	fmt.Println(server.ListenAndServe())
+	port, err := strconv.Atoi(portStr)
+	if err != nil {
+		logging.AppLog.WriteLogError("Could not convert http port to integer!", logMap("error", err))
+	}
+	logging.AppLog.WriteLogInfo("Starting sudoku server", logMap("port", port))
+
+	err = server.ListenAndServe()
+	logging.AppLog.WriteLogError("Server terminated.", logMap("error", err))
 }

@@ -31,6 +31,12 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - example on page 235 (learning go), could that be changed into returning a ReadCloser?
 - `retract` keyword is not mentioned in learning Go!
 - read up on bytes.Buffer
+- read up on bufio.{Reader,Writer,Scanner} as ioutil.Read/WriteAll replacement
+- *prometheus*,
+  write something to export /metrics endpoint and monitor it
+  https://app.pluralsight.com/course-player?clipId=26bf6f6f-c9e5-46af-aa11-30304069d022
+  using golang's templating mechanism maybe
+
 
 
 # Quiz ideas
