@@ -547,3 +547,19 @@ Multi-platform docker gets me in the mood to try that on my (also neglected Rasp
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/2736c3edeed9f533ff4bbc7ca26f18fdd0e5b719
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
+
+## Day 40
+
+December 20, 2021
+
+**Today's Progress**
+
+- probably solved the local module mystery
+- added logrus logging to service
+- ran example for docker compose, want to utilize it for advanced logging infra
+- looked into fluentd, prometheus, ELK
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/0767a12064a36d04fa496e46d8aeb80cc1cdc122
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+
