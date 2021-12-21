@@ -1,6 +1,10 @@
 FROM golang:1.17 AS builder
 
-ENV PORT 8080
+# just for testing
+ARG defaultPort=8080
+RUN echo "Setting default env.PORT to ${defaultPort}"
+
+ENV PORT=${defaultPort}
 WORKDIR /app/cmd/sudokuserver
 
 ADD . /app/

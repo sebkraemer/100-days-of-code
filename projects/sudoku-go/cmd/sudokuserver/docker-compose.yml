@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  sudokuserver:
+    container_name: sudokuserver
+    image: sudokuserver
+    build:
+      # needs to find sudokusolver pkg
+      context: ./../..
+      dockerfile: ./cmd/sudokuserver/Dockerfile
+      args:
+        exampleArg: "set by docker-compose"
+    ports:
+      - 8080:8080
+    #networks:
+    #  - sudoku-network
+    #volumes:
+    #  - ./logs:/logs
+    

@@ -21,6 +21,9 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - Pointers chapter notices that the interface{} parameter needs a pointer and that this API pattern is used because of lack of generics. Generics being almost there, how does that compare? will e.g. the JSON.Unmarshal method change?
 - what does & really do, always create a type on the heap? heap vs stack not explicitly mentioned in spec
 - when exaclty does import execute anything from a package?
+- with EXPOSE in a dockerfile, is it necessary to specify the port when running the container?
+  https://docs.docker.com/engine/reference/run/#expose-incoming-ports
+
 
 # TODOs
 - Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.
