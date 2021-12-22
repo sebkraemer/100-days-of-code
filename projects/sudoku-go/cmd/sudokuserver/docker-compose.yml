@@ -1,4 +1,4 @@
-version: '3.7'
+version: "3"
 
 services:
   sudokuserver:
@@ -7,13 +7,63 @@ services:
     build:
       # needs to find sudokusolver pkg
       context: ./../..
+      # unused trick: use e.g. ${APP_ENV} var as part of the filename to build/run
+      # different test/prod variants
       dockerfile: ./cmd/sudokuserver/Dockerfile
       args:
-        exampleArg: "set by docker-compose"
+        defaultPort: 8080
     ports:
       - 8080:8080
-    #networks:
-    #  - sudoku-network
-    #volumes:
-    #  - ./logs:/logs
+    # networks:
+    #   - sudoku-network
     
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: sudokuserver
+    depends_on:
+      - fluentd
+    
+  fluentd:
+    container_name: fluentd
+    build:
+      context: .
+      dockerfile: ./fluentd/Dockerfile_fluentd
+    user: root
+    ports:
+      - "24224:24224"
+      - "24224:24224/udp"
+    logging:
+      driver: "local"
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.13.1
+    container_name: elasticsearch
+    environment:
+      - "discovery.type=single-node"
+    expose:
+      - "9200"
+    ports:
+      - "9200:9200"
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.13.1
+    depends_on:
+      - "elasticsearch"
+    ports:
+      - "5601:5601"
+
+  web:
+    image: httpd
+    ports:
+      - "8000:80"
+    depends_on:
+      - fluentd
+    links:
+      - fluentd
+    logging:
+      driver: "fluentd"
+      options:
+        fluentd-address: localhost:24224
+        tag: httpd.access
