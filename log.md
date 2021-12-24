@@ -575,6 +575,8 @@ December 24, 2021 🎄
 **Thoughts**
 
 - Goroutines, finally 😎
+- I find it interesting that when the first worker returns and the otheres are still running (in sleep), they get canceled or whatever, the calling function does not wait for the slowest worker and exits cleanly.
+  This is different to what I would expect in classical thread.join() scenarios threadpool scenarios.
 - Gotcha! I'm glad I experienced the pitfall of capturing the reference to a loop counter in a closure instead of the value -- better learn that now than later
 - Deadlock detection (experienced it) is an interesting feature
 

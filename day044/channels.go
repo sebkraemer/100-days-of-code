@@ -23,6 +23,7 @@ func runWorkers(workers []func() int) int {
 		}(worker)
 	}
 	res := <-result
+	close(done) // todo: what is the difference here to leaving it out?
 
 	return res
 }
