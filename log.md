@@ -563,3 +563,21 @@ December 20, 2021
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/0767a12064a36d04fa496e46d8aeb80cc1cdc122
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
+
+## Day 44
+
+December 24, 2021 🎄
+
+**Today's Progress**
+
+- Goroutines: experiment with done channel pattern and (as I call it) implicit cancellation
+
+**Thoughts**
+
+- Goroutines, finally 😎
+- Gotcha! I'm glad I experienced the pitfall of capturing the reference to a loop counter in a closure instead of the value -- better learn that now than later
+- Deadlock detection (experienced it) is an interesting feature
+
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/bb7800b202bd27ae2c8a745a3e6a6baf6e29c02e
