@@ -596,3 +596,6 @@ revisit yesterday's open questions:
   https://stackoverflow.com/a/36613932/4312669
 - goroutine was not 'killed' when closing the calling function or closing its destination channel. That showed when adding a sleep() at the end of the program, the printfs were still showing.
   Presumably a cancellation context would be needed for stopping a worker prematurely.
+
+**Link to work:**
+- Commits: https://github.com/sebkraemer/100-days-of-code/commit/9e4ccb254e4f740ef8004d9d208726f5831119e1
