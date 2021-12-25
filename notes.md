@@ -23,6 +23,7 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - when exaclty does import execute anything from a package?
 - with EXPOSE in a dockerfile, is it necessary to specify the port when running the container?
   https://docs.docker.com/engine/reference/run/#expose-incoming-ports
+- goroutines that are still running, are a problem when returning from a function or quitting the program? (see `channels.go` play project)
 
 
 # TODOs
@@ -55,3 +56,5 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - var a = 10; pa := &a, what type is pa?
 - difference !bytes.Equal() vs bytes.Compare(), linter told me to use the first
 - encoding of zero value struct, zero value slice/map, zero size slice/map
+- is it necessary to call close() on a channel after use? (no)
+  https://stackoverflow.com/a/36613932/4312669

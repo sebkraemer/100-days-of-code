@@ -583,3 +583,16 @@ December 24, 2021 🎄
 
 **Link to work:**
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/bb7800b202bd27ae2c8a745a3e6a6baf6e29c02e
+
+
+## Day 45
+
+December 25, 2021
+
+**Today's Progress**
+
+revisit yesterday's open questions:
+- it's OK to not close a channel if the program logic doesn't depend on it (I notied that by no apparent program behavior yesterday when I first had forgotten the close())
+  https://stackoverflow.com/a/36613932/4312669
+- goroutine was not 'killed' when closing the calling function or closing its destination channel. That showed when adding a sleep() at the end of the program, the printfs were still showing.
+  Presumably a cancellation context would be needed for stopping a worker prematurely.

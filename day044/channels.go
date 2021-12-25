@@ -23,7 +23,11 @@ func runWorkers(workers []func() int) int {
 		}(worker)
 	}
 	res := <-result
-	close(done) // todo: what is the difference here to leaving it out?
+
+	// https://stackoverflow.com/a/36613932/4312669
+	// it's not strictly necessary to close a channel, it can be garbage collected either way if it is not referenced any more
+	// depending on the situation, other parts of the program might depend on the close() behavior
+	close(done)
 
 	return res
 }
@@ -33,11 +37,20 @@ func main() {
 
 	for i := range workers {
 		i := i // beware of unwanted closure capturing of i!
-		fmt.Println(i)
 		workers[i] = func() int {
 			duration := time.Duration((1+i)*300) * time.Millisecond
 			fmt.Println("worker with duration", duration)
-			time.Sleep(duration)
+			start := time.Now()
+			for {
+				stop := time.Now()
+				d := stop.Sub(start)
+				fmt.Println(i, d)
+				if d >= duration {
+					break
+				}
+				time.Sleep(time.Duration(100) * time.Millisecond)
+			}
+			fmt.Println("exiting", i)
 			return i
 		}
 	}
@@ -50,4 +63,12 @@ func main() {
 
 	// 0 will be printed since the function will always return after the shorted worker with index 0
 	fmt.Println(res)
+
+	// even though runWorkers returned the goroutines spawned from it are still running;
+	// without the sleep, they were just not visible and 'killed' without apparent
+	// problem when quitting the program
+	// I assume that e.g. a cancellation context would be needed to, well, cancel the workers prematurely.
+	fmt.Println("waiting for other routines to finish (?)")
+	time.Sleep(time.Duration(5) * time.Second)
+	fmt.Println("finished")
 }
