@@ -10,6 +10,8 @@ creating and starting a program:
 
 automatically add/remote modules to go.mod: `go mod tidy`
 
+- `-ldflags="-s -w" 	 See go help build, omit the symbol table, debug information to get a smaller binary` (https://www.go-on-aws.com/lambda-go/lambda_function/simple-lambda/)
+
 
 # Open questions
 
@@ -24,6 +26,8 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - with EXPOSE in a dockerfile, is it necessary to specify the port when running the container?
   https://docs.docker.com/engine/reference/run/#expose-incoming-ports
 - goroutines that are still running, are a problem when returning from a function or quitting the program? (see `channels.go` play project)
+- how does one implement a function with a `interface{}` parameter?
+- how about disabling/enabling optimizations explicitly? ("debug vs. release build")
 
 
 # TODOs
@@ -40,7 +44,8 @@ automatically add/remote modules to go.mod: `go mod tidy`
   write something to export /metrics endpoint and monitor it
   https://app.pluralsight.com/course-player?clipId=26bf6f6f-c9e5-46af-aa11-30304069d022
   using golang's templating mechanism maybe
-
+- on page 245, learning Go, on bottom performance benefits are mentioned when using strings, but the example from the docs is only a string of a JSON array, not an array type, so like before it works with a reader on a string. I don't see the huge benefit and wonder if the json.Decoder works so much faster on a JSON array than on line-separated json objects.
+  could be a candidate for a benchmark
 
 
 # Quiz ideas
