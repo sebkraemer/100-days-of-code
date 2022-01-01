@@ -564,6 +564,37 @@ December 20, 2021
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
 
+
+41 
+
+work: docker-compose fuer service
+ skill iq fuer go absolviert, tweet verlinken
+
+thoughts
+
+really fun to refresh docker knowledge and extend (docker compose today) and play with it
+not so much fun: getting stuck, eating my time with a bad docker file mount, preventing fluentd to start!
+
+wo es passt, noch https://hub.docker.com/_/scratch/ link einbinden
+
+https://github.com/Sirupsen/logrus vor ein paar Tagen
+
+42
+
+links, depends_on, network.. similar functionality and changing best practices (and behavior of docker-compose?) can be confusing when different tutorials and documentation each states its own way of doing things. I think I got it right with just `depends_on`.
+
+Old tutorial approach is superseded by simply using the `fluentd` docker logger 🦾
+
+.. now to add more services
+
+hm, elasticsearch wird wohl nicht weiter als opensource entwickelt! (link) -> grafana loki als alternative?
+
+my take on the fluentd example:
+
+Docker-compose example does not work correctly #297 
+https://github.com/fluent/fluentd-docs-gitbook/issues/297#issuecomment-999889845
+
+
 ## Day 44
 
 December 24, 2021 🎄
@@ -599,3 +630,43 @@ revisit yesterday's open questions:
 
 **Link to work:**
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/9e4ccb254e4f740ef8004d9d208726f5831119e1
+
+
+
+48 -- am 
+
+manchmal ist es einfacher, direkt die doku zu lesen (aws cli) als in tutorials und kursen nach antworten zu suchen (beispiel aws installation)
+
+feedback an typ von go-on-aws: installatino von aws cli nicht gefunden
+
+aws cli installation schlaegt fehl fuer nur meinen user, fuer alle geht durch :(
+
+  https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+
+48 nicht geloggt, eigentlich auch nix geschafft
+
+49
+
+aws cli konfigurieren: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+ best practice, create IAM administrator account: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
+ create IAM user for lambda tutorial, used role AWSLambda_FullAccess
+
+
+ 50
+ errata broken link for json stream decoder example 
+
+ 51
+ skipped, just with friends celebrating last day of 2021
+Following flash card learning was hard in the last days due to visitors and celebration.
+
+ 52
+
+ - migrated sudokusolver to AWS lambda!
+
+ Thoughts:
+
+It works and wasn't hard but I feel like I only know half (or less) of what I'm doing AWS-wise.
+For example, the first attempt at running the function failed because I had not named it 'main'.
+Apparently, the binary's name is *not* deliberate.
+I should really cleanup the log and add the older entried.
+
