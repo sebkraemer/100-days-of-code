@@ -446,6 +446,46 @@ It's interesting to note that passing an interface as parameter can include (is 
 - Project: [golang-fifa-world-cup-web-service@3b068f9 submodule](./projects/)
 
 
+## Day 28
+
+December 8, 2021
+
+**Today's Progress**
+
+- added a few (yet failing) http.Handler tests for the sudoku web service
+
+**Thoughts**
+
+It’s still a zoo with all the involved types, esp. as there are different ways to solve things.
+Will need to investigate and familiarise.
+
+**Link to work:**
+- Commits: [https://github.com/sebkraemer/100-days-of-code/commit/b1dd6952c8026b56114375139d8107c74b995d36](https://t.co/0uPzC8W131)
+- Project: [sudoku-go](./projects/sudoku-go)
+
+
+## Day 29
+
+December 9, 2021
+
+**Today's Progress**
+
+After I felt I lost a bit track of the foundations I spent some time with the book:
+
+- Read *io and friends* and *time* sections from chapter 11
+- found and reported a typo
+- created fresh supply of flash cards (“fresh cards” haha)
+
+
+## Day 30
+
+December 10, 2021
+
+**Today's Progress**
+
+N/A
+
+
 ## Day 31
 
 December 11, 2021
@@ -472,7 +512,7 @@ December 12, 2021
 **Today's Progress**
 
 - Pluralsight course *Creating Web Services with Go* by @AlexCSchultz
-
+- Moved HTTP handler code to a running service
 
 **Thoughts**
 
@@ -516,12 +556,26 @@ December 13, 2021
 
 ## Day 34
 
-*TODO, get note from twitter*
+December 14, 2021
+
+**Today's Progress**
+
+No coding. Setting up docker via minikube, but it’s not quite working yet. Really looking forward to building that docker image of the solver service!
+
+It’s been some time since I used docker actively..
 
 
-## Day 34
+## Day 35
 
-*TODO, get note from twitter*
+December 15, 2021
+
+**Today's Progress**
+
+Continuing the journey with minikube and finally connected to my service.
+
+None of these tutorials tell you what’s necessary to simply `docker run -p ..` something and how to connect — without kube deployments.
+
+Now do I want to dive into k8s yet..? (Probably not.)
 
 
 ## Day 36
@@ -545,7 +599,43 @@ Multi-platform docker gets me in the mood to try that on my (also neglected Rasp
 
 **Link to work:**
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/2736c3edeed9f533ff4bbc7ca26f18fdd0e5b719
-- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+- Project: [sudoku-go/cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+
+
+## Day 37
+
+December 17, 2021
+
+**Today's Progress**
+
+- Refresher on multi-stage docker builds, learned about static linking with `CGO_ENABLED=0` and docker’s special `FROM scratch`, wow.
+  Reduced image size from ~1GB to 6 MB 😅
+- Create Dockerfile for multistage build
+
+**Link to work:**
+- Commits: [https://github.com/sebkraemer/100-days-of-code/commit/8c4692ac2683688088221f5b75456d2ec0f62ba2](https://t.co/orJ8w2tB2X)
+- Project: [sudoku-go/cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+
+
+## Day 38
+
+December 18, 2021
+
+**Today's Progress**
+
+- delve dbg server in docker (peek)
+- structured logging with [logrus](https://github.com/Sirupsen/logrus)
+
+I got a bit lost again in setting up a local non-internal package, will still have to find “best” way. Seeing questions and solutions (like `GO111MODULE=on`) tell me I’m not alone with this.
+
+
+## Day 39
+
+December 19, 2021
+
+**Today's Progress**
+
+N/A
 
 
 ## Day 40
@@ -564,35 +654,65 @@ December 20, 2021
 - Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
 
+## Day 41
 
-41 
+December 21, 2021
 
-work: docker-compose fuer service
- skill iq fuer go absolviert, tweet verlinken
+**Today's Progress**
 
-thoughts
+- worked through docker-compose course by @DanWahlin 👍
+- took pluralsight Go skill iq assessment
+  ![skill-iq-diagram](./assets/2021-12-21-pluralsight-skilliq-go.png)
+- created docker-compose for my service ..but failed to get fluentd running, my config gets always mounted as directory?! 😞
 
-really fun to refresh docker knowledge and extend (docker compose today) and play with it
-not so much fun: getting stuck, eating my time with a bad docker file mount, preventing fluentd to start!
+**Thoughts**
 
-wo es passt, noch https://hub.docker.com/_/scratch/ link einbinden
+It was real fun to refresh docker knowledge and dive into docker compose which I had not used yet.
+Not so much fun: getting stuck, wasting my time (or not) with a bad docker file mount (see yesterday's log) which prvents fluentd to start with my config!
 
-https://github.com/Sirupsen/logrus vor ein paar Tagen
+Message by pluralsight: "My Go Core Language IQ is 180—that’s better than 69% of my peers! What's your #PluralsightIQ? https://app.pluralsight.com/score/redir/4276a8cf-2efe-4aa3-b2ab-b77a44591bab?2294cfd2d0"
+I guess I could have done better if I had covered the concurrency and channels topic already. But anyway, it's not too bad. ✌️
 
-42
+**Link to work:**
+- Commits: [https://github.com/sebkraemer/100-days-of-code/commit/a4dfcc4f8e13fb147c9825c8c4ecaf0ac69c2d60](https://t.co/YZSZq9oKfI)
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 
-links, depends_on, network.. similar functionality and changing best practices (and behavior of docker-compose?) can be confusing when different tutorials and documentation each states its own way of doing things. I think I got it right with just `depends_on`.
 
-Old tutorial approach is superseded by simply using the `fluentd` docker logger 🦾
+## Day 42
 
-.. now to add more services
+December 22, 2021
 
-hm, elasticsearch wird wohl nicht weiter als opensource entwickelt! (link) -> grafana loki als alternative?
+**Today's Progress**
 
-my take on the fluentd example:
+- The approach for logging from docker that I got from that pluralsight video is superseded by simply using the `fluentd` docker logger, so I'm implementing that 🦾 (fluentd pluging)
+- extended docker setup to push logs to ELK stack; fought extensively with fluentd and docker log tags.. but succeeded 👇
+  ![sudokuserver-in-elasic-search](./assets/2021=12=21-sudokuserver-in-ELK.png)
+  This is how my service shows up in kibana. Not so interesting content-wise but well-structured for KQL queries and filtering: json format that can be further parsed (in kibana or even before in fluentd) and filtered e.g. by its tag.
+- participated in [fluentd github issue #297](https://github.com/fluent/fluentd-docs-gitbook/issues/297#issuecomment-999889845) because the docker compose example from the docs does not work as expected, causing me some headache
+  ![image-one-does-not-simply-copy-and-paste-a-docker-compose-yaml-file](./assets/one-does-not-simply-cp-docker-compose-yml.jpg)
 
-Docker-compose example does not work correctly #297 
-https://github.com/fluent/fluentd-docs-gitbook/issues/297#issuecomment-999889845
+**Thoughts**
+
+`links`, `depends_on`, `network`.. similar functionality and changing best practices (and behavior of docker-compose?) can be confusing when different tutorials and documentation each states its own way of doing things. I think I got it right with just `depends_on`.
+
+It’s awesome that docker logs allows plugins that will push right to a service (well, cloud collector usually), learned that
+
+Hm, elasticsearch changed their business model, apparently the free OSS version won't be maintained any more. Quite some news! Grafana Loki as alternative?
+
+**Link to work:**
+- Commits: [https://github.com/sebkraemer/100-days-of-code/commit/a4dfcc4f8e13fb147c9825c8c4ecaf0ac69c2d60](https://t.co/YZSZq9oKfI)
+- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+- Docker-compose example does not work correctly #297: https://github.com/fluent/fluentd-docs-gitbook/issues/297#issuecomment-999889845
+
+
+## Day 43
+
+December 23, 2021
+
+**Today's Progress**
+
+- waded through half of concurrency chapter in *Learning go*
+- Spent time with family 🎄
 
 
 ## Day 44
@@ -670,3 +790,4 @@ For example, the first attempt at running the function failed because I had not 
 Apparently, the binary's name is *not* deliberate.
 I should really cleanup the log and add the older entried.
 
+link to work!! 

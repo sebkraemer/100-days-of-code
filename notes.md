@@ -32,7 +32,7 @@ automatically add/remote modules to go.mod: `go mod tidy`
 
 # TODOs
 - Many great articles and talks are referenced in the *Learning Go*'s Pointers chapter.
-- revisit Interfaces chapter
+- revisit Interfaces chapter, see also https://www.airs.com/blog/archives/281
 - `go generate`
 - local packages OK after all? (ref. `./projects/golang-fifa-world-cup-web-service`)
 - (....) (I missed to note a few items, I'm sure..)
@@ -46,10 +46,25 @@ automatically add/remote modules to go.mod: `go mod tidy`
   using golang's templating mechanism maybe
 - on page 245, learning Go, on bottom performance benefits are mentioned when using strings, but the example from the docs is only a string of a JSON array, not an array type, so like before it works with a reader on a string. I don't see the huge benefit and wonder if the json.Decoder works so much faster on a JSON array than on line-separated json objects.
   could be a candidate for a benchmark
+- difference zero value and default value (none?)
+- reading and flash-carding all https://pkg.go.dev/fmt
+- aws with docker: https://aws-blog.de/2021/11/lambda-container-deployment-with-cdk-using-arm-based-lambda-with-go.html
+- article idea: go modules and versioning and "GOPATH mode"
+  - https://go.dev/blog/v2-go-modules: ".. tools that are not version-aware — including the go command in GOPATH mode — may not distinguish between major versions"
+  - https://utcc.utoronto.ca/~cks/space/blog/programming/Go117StillGopathMode
+  - possibly refer day 37
+- escape analysis: https://www.ardanlabs.com/blog/2017/05/language-mechanics-on-escape-analysis.html
+- splay tree: https://en.wikipedia.org/wiki/Splay_tree
+- memory layout
+  - https://go101.org/article/memory-layout.html
+  - https://golangbyexample.com/two-dimensional-array-slice-golang/#How_multidimensional_array_is_stored_in_memory
+- PR for fluentd + docker compose example in fluentd docs, see github issue where I commented
+- have a look for useful stuff: https://gitlab.com/Figur81/100dayscodegolang
+- check suspended and todo-tagged flash cards, aim for unsuspending
 
 
 # Quiz ideas
-- difference zero value and default value (none?)
+- zero/default values
 - different initializations of e.g. map or slice, when nil, when not?
 - monotonic time vs. wall clock time, different handling in time.Time when e.g. captured with time.Now(), difference in calculation (because of time zone handling?) (time in io chapter)
 - go implicit conversion with interface?
@@ -63,3 +78,14 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - encoding of zero value struct, zero value slice/map, zero size slice/map
 - is it necessary to call close() on a channel after use? (no)
   https://stackoverflow.com/a/36613932/4312669
+- something about memory layout, see above
+- memory sharing properties of subslices: https://go.dev/play/p/txAYy0bwmRE
+
+# Other / links
+- GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps: https://www.youtube.com/watch?v=oL6JBUk6tj0
+- Semantic Import Versioning: https://research.swtch.com/vgo-import
+- Minimal Version Selection: https://www.ardanlabs.com/blog/2019/12/modules-03-minimal-version-selection.html
+- https://go.dev/doc/
+- cloud native
+  - https://www.capitalone.com/tech/cloud/what-is-cloud-native/
+- https://gophercises.com/
