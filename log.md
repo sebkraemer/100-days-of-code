@@ -701,7 +701,7 @@ Hm, elasticsearch changed their business model, apparently the free OSS version 
 
 **Link to work:**
 - Commits: [https://github.com/sebkraemer/100-days-of-code/commit/a4dfcc4f8e13fb147c9825c8c4ecaf0ac69c2d60](https://t.co/YZSZq9oKfI)
-- Project: [sudoku-go//cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
+- Project: [sudoku-go/cmd/sudokuserver](./projects/sudoku-go/cmd/sudokuserver)
 - Docker-compose example does not work correctly #297: https://github.com/fluent/fluentd-docs-gitbook/issues/297#issuecomment-999889845
 
 
@@ -752,42 +752,150 @@ revisit yesterday's open questions:
 - Commits: https://github.com/sebkraemer/100-days-of-code/commit/9e4ccb254e4f740ef8004d9d208726f5831119e1
 
 
+## Day 46
 
-48 -- am 
+December 26, 2021
 
-manchmal ist es einfacher, direkt die doku zu lesen (aws cli) als in tutorials und kursen nach antworten zu suchen (beispiel aws installation)
+**Today's Progress**
 
-feedback an typ von go-on-aws: installatino von aws cli nicht gefunden
-
-aws cli installation schlaegt fehl fuer nur meinen user, fuer alle geht durch :(
-
-  https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
-
-48 nicht geloggt, eigentlich auch nix geschafft
-
-49
-
-aws cli konfigurieren: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
- best practice, create IAM administrator account: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
- create IAM user for lambda tutorial, used role AWSLambda_FullAccess
+- Solved goroutine lifetime question, see yesterday’s log
+- Started pluralsight course ‘Introduction to AWS Lambda’ by @fmc_sea — pretty clear so far, will hopefully enable me to quickly deploy the Go web service (looks rather doable so far!)
 
 
- 50
- errata broken link for json stream decoder example 
+## Day 47
 
- 51
- skipped, just with friends celebrating last day of 2021
-Following flash card learning was hard in the last days due to visitors and celebration.
+December 27, 2021
 
- 52
+**Today's Progress**
 
- - migrated sudokusolver to AWS lambda!
+- continued course about AWS lambda
+- created AWS account
 
- Thoughts:
+**Thoughts**
+
+Sometimes it is instructive to just navigate and enter the official docs, which in case of AWS are excellent as far as I can tell already.
+I feel I spent too much between tutorials without concrete outcome.
+Sometimes an essential (for me) part is missing, other times the goal is different to what I need.
+AWS installation and configuration is missing both in pluralsight's courses I watched and also the *AWS Lambda with Go* written tutorial.
+
+https://docs.aws.amazon.com/lambda/latest/dg/welcome.html
+
+
+## Day 48
+
+December 28, 2021
+
+**Today's Progress**
+
+- went from video course to digging through AWS docs — this is HUGE!
+- installed AWS cli
+
+**Thoughts**
+
+It feels like I didn't get anything done today.. Information overload. AWS landscape is so big I got lost.
+The AWS CLI installer failed when I tried to install only for the current user on MacOS 🤨.
+
+## Day 49
+
+December 29, 2021
+
+**Today's Progress**
+
+- created IAM accounts for Admin and lambda user, used role `AWSLambda_FullAccess`
+- after that, got the ‘AWS Lambda in Go’ sample from @megaproaktiv running ✌️🤗 thanks so much!
+
+![aws-cli-lambda-proof-gif](./assets/2021-12-29-aws-lambda-gosimple.gif)
+
+**Thoughts**
+
+Feels so great to *finally* have something running, something I have never done before! 🥲
+
+**Links**
+
+- https://go-on-aws.com/lambda-go/
+- configure AWS CLI: https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html
+- AWS best practice, create IAM administrator account: https://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started_create-admin-group.html
+
+
+## Day 50
+
+December 30, 2021
+
+**Today's Progress**
+
+- playing with json stream encoding/decoding
+- created new flash cards after a long time of only repeating
+- reported errata in Learning go playground link
+
+**Thoughts**
+
+Once I work on the book I feel I'm neglegcting the project and vice versa.
+There's just not enough time, even (or especially) during time around Christmas.
+
+
+## Day 51
+
+December 31, 2021
+
+**Today's Progress**
+
+*skipped, just with friends celebrating last day of 2021*
+
+**Thoughts**
+
+Following through with flash card learning was hard in the last days due to visitors and celebration. But I did it. No zero days at that front.
+
+
+## Day 52
+
+January 1, 2022
+
+**Today's Progress**
+
+- migrated my little sudoku solver to run on AWS lambda! 🤩
+
+![sudoku-on-aws-lambda-logs](./projects/sudoku-go/cmd/sudokusolver-lambda/sudoku-lambda-logs.png)
+
+**Thoughts**
 
 It works and wasn't hard but I feel like I only know half (or less) of what I'm doing AWS-wise.
-For example, the first attempt at running the function failed because I had not named it 'main'.
-Apparently, the binary's name is *not* deliberate.
-I should really cleanup the log and add the older entried.
+This is only a glimpse of what is happening out there everyday.
 
-link to work!! 
+Example for not knowing what I'm doing: the first attempt at running the function failed because I had not named it 'main', both handler and binary.
+Apparently, the binary's name is *not* deliberate.
+
+~~I should really cleanup the log and add the older entries.~~ (done)
+
+**Link to work:**
+
+- Commit: [https://github.com/sebkraemer/100-days-of-code/commit/510427fc178ee7662485c789353ed11bbff5f897](https://t.co/cQBtDZWqrD)
+- Project: [sudoku-go/cmd/sudokusolver-lambda](./projects/sudoku-go/cmd/sudokusolver-lambda/)
+
+
+## Day 53
+
+January 2, 2022
+
+**Today's Progress**
+
+A new year and past 50 days, I took a day to cleanup some debt.
+
+- closed dozens of open browser tabs, added notes for things I want to get back to
+- “fresh cards”
+- added quite a few missing entries to the log
+
+**Thoughts**
+
+It felt good to revisit these last few weeks.
+Although everyday change feels small usually, sometimes stuck and always time limited, I'm seeing that I accomplished something.
+On the other hand, it's not so much strictly following a Go project..
+
+It appears some more folks start following me without me knowing them.
+I even don't tweet much of useful links..
+So that's a bit surprising but feels good.
+
+**Link to work:**
+
+- Commit: [https://github.com/sebkraemer/100-days-of-code/commit/4b2432bd60253e43bdac79176b8c73cb1310468c](https://t.co/4KWOYUdl2X)
+
+
