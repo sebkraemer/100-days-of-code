@@ -899,3 +899,17 @@ So that's a bit surprising but feels good.
 - Commit: [https://github.com/sebkraemer/100-days-of-code/commit/4b2432bd60253e43bdac79176b8c73cb1310468c](https://t.co/4KWOYUdl2X)
 
 
+## Day 54
+
+January 3, 2022
+
+**Today's Progress**
+
+- more housekeeping, adding missing logs and projects
+- For some reason I divert and looked into UML. Plan is to create flash cards.
+- I cheated and imported a Go flash card deck created by @cflynn07, shared via [Gist](https://gist.github.com/cflynn07/1b391ab97c6837582a3a4b653f842fce).
+  There's overlap already but I'm intrigued how well I'll manage to answer the cards.
+
+**Thoughts**
+
+I suspect the change in direction is at least in part due to the fact that I'm not sure where to go (sic) with the challenge.
