@@ -913,3 +913,25 @@ January 3, 2022
 **Thoughts**
 
 I suspect the change in direction is at least in part due to the fact that I'm not sure where to go (sic) with the challenge.
+
+
+## Day 55
+
+January 4, 2022
+
+**Today's Progress**
+
+- looked up things that came up when learning the new Go cards
+- created UML flash cards as I went along the basics
+
+**Thoughts**
+
+It's super interesting to read the other flash cards!
+What I really like are the ones that deal with language and which are certainly not covered in *Learning Go*, e.g. in what order will package level variables be initialized, and over multiple files.
+Again I feel that my C++ background is responsible for that part of curiosity and reason I went to the spec several times.
+
+Which brings me to the point that I really should do more coding and not only "studying"!
+
+Looking forward to reviewing the new flash cards. Once and for all the problem of not remembering arrow directions will be solved!
+
+![uml-generalization-diagram](./assets/2022-01-04-uml-generalization-flashcard.png)
