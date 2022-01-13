@@ -89,3 +89,16 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - cloud native
   - https://www.capitalone.com/tech/cloud/what-is-cloud-native/
 - https://gophercises.com/
+
+# Commands
+
+`minikube start --listen-address=0.0.0.0 --driver=hyperkit --no-kubernetes`
+`eval $(minikube -p minikube docker-env)` # or move this os bash profile
+
+## with vmware driver!
+
+`minikube start --listen-address=0.0.0.0 --driver=vmware --no-kubernetes --memory 4096 --cpus 4`
+`eval $(minikube docker-env)`
+
+to make mount available to docker: `minikube mount /Users/s/src:/Users/s/src`
+
