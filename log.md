@@ -935,3 +935,28 @@ Which brings me to the point that I really should do more coding and not only "s
 Looking forward to reviewing the new flash cards. Once and for all the problem of not remembering arrow directions will be solved!
 
 ![uml-generalization-diagram](./assets/2022-01-04-uml-generalization-flashcard.png)
+
+
+
+
+## Day 64
+
+January 13, 2022
+
+**Today's Progress**
+
+- setup new go-wishlist project
+- researched MongoDB, setup locally with docker-compose
+- Learned about the mongodb *arbiter* and replica voting.
+- ~~bootstrapped Go project with initial db connection~~ (not yet! one more day without coding Go.. 😢)
+
+**Thoughts**
+
+Feels like a plan, again now.
+
+![docker-compose-mongodb.png](./assets/docker-compose-mongodb.png)
+
+**Link to work:**
+
+- Commit: [https://github.com/sebkraemer/go-wishlist](https://github.com/sebkraemer/go-wishlist)
+- Project: [go-wishlist submodule](./projects/go-wishlist) (put there as a reference but will not always be up to date)

@@ -1,3 +1,8 @@
 [submodule "projects/golang-fifa-world-cup-web-service"]
 	path = projects/golang-fifa-world-cup-web-service
 	url = ../golang-fifa-world-cup-web-service
+[submodule "projects/go-wishlist"]
+	path = projects/go-wishlist
+	url = ../go-wishlist
+[submodule "go-wishlist"]
+	branch = main
