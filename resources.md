@@ -25,6 +25,13 @@
 2. [Boot Up 2017 with the #100DaysOfCode Challenge](https://medium.freecodecamp.com/start-2017-with-the-100daysofcode-improved-and-updated-18ce604b237b) freeCodeCamp Medium 
 3. [Resistance, Habit Change and the #100DaysOfCode Movement](https://studywebdevelopment.com/100-days-of-code.html) StudyWebDevelopment Blog
 
+## Courses
+
+- MongoDB university, free courses and possibly vouchers for certification
+  - https://university.mongodb.com/courses/catalog
+  - kudos @MohsenKamranii for the hint. https://twitter.com/mohsenkamranii/status/1482500357389701122?s=21
+
+
 ## Podcasts
 
 # Additional Resources on the #100DaysOfCode

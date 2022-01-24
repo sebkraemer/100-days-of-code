@@ -61,6 +61,7 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - PR for fluentd + docker compose example in fluentd docs, see github issue where I commented
 - have a look for useful stuff: https://gitlab.com/Figur81/100dayscodegolang
 - check suspended and todo-tagged flash cards, aim for unsuspending
+- checkout go tags! (build configs?)
 
 
 # Quiz ideas
@@ -80,6 +81,10 @@ automatically add/remote modules to go.mod: `go mod tidy`
   https://stackoverflow.com/a/36613932/4312669
 - something about memory layout, see above
 - memory sharing properties of subslices: https://go.dev/play/p/txAYy0bwmRE
+- can you take the address of a map element? (no. why? rehashing might invalidate)
+- what is unnamed pointer type? -> unnamed type: composition of previously declared types -> type literal (p. 135 Go programming lang book)
+- anon function. a) function that is not assigned to a variable, b) value as the result of function expression (YES), c) ..
+  - bonus: why is it important and useful: named functions are only allowed on package level, so for defer() and other closure uses, anonymous functions are necessary.
 
 # Other / links
 - GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps: https://www.youtube.com/watch?v=oL6JBUk6tj0
