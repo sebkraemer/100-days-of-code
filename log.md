@@ -1087,3 +1087,57 @@ January 24, 2022
 
 - Commit: [go-wishlist day 75](https://t.co/w3qNjK6RC8)
 - Project: [go-wishlist submodule](./projects/go-wishlist)
+
+
+## Day 76
+
+January 25, 2022
+
+**Today's Progress**
+
+- modified routes to be managed by chi routing package
+- started with browser session (not committed yet)
+
+**Link to work:**
+
+- Commit: [go-wishlist day 76](https://t.co/x6jrk4IIsZ)
+- Project: [go-wishlist submodule](./projects/go-wishlist)
+
+
+## Day 77
+
+January 26, 2022
+
+**Today's Progress**
+
+- reasoning about previous code 😆
+- added session handler middleware
+- refresher for middleware-ing on how cookies work
+- playing with session data
+
+**Thoughts**
+
+So I wonder if that *repository pattern* presented in the tutorial is really that.
+When researching it, it appears to be a data layer abstraction.
+Implemented in the tutorial, that looks more like a constructor and methods for Golang structs 🤔
+
+There are many global variables where I learned (from my own experience and the *Learning Go* book) that this should be avoided.
+I'm continuing to see where it leads.
+Refactoring is always an option as I continue to learn; currently, progressing with the project is a priority.
+
+**Link to work:**
+
+- Commit: [go-wishlist day 75](https://t.co/)
+- Project: [go-wishlist submodule](./projects/go-wishlist)
+
+
+## Day 78
+
+January 27, 2022
+
+**Today's Progress**
+
+Sorry, really missed meeting my goals.
+Had to take care of my kids.
+Continued watching my tutorial but the content was hardly applicable to what I need in the next steps.
+(Hm, what *do* I need?) 🤔

@@ -62,6 +62,7 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - have a look for useful stuff: https://gitlab.com/Figur81/100dayscodegolang
 - check suspended and todo-tagged flash cards, aim for unsuspending
 - checkout go tags! (build configs?)
+- repository pattern, "constructor" vs. DDD abstraction
 
 
 # Quiz ideas
