@@ -1141,3 +1141,5 @@ Sorry, really missed meeting my goals.
 Had to take care of my kids.
 Continued watching my tutorial but the content was hardly applicable to what I need in the next steps.
 (Hm, what *do* I need?) 🤔
+
+(Later.. Damn it, I added a file server for static files to have *someting* done..)
