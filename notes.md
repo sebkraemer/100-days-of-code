@@ -63,6 +63,15 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - check suspended and todo-tagged flash cards, aim for unsuspending
 - checkout go tags! (build configs?)
 - repository pattern, "constructor" vs. DDD abstraction
+- templating and range
+- range over channel
+- when does panic occur in channel?
+- what exactly *is* panic anyway?
+- Go compatibility guarantee
+- go task
+- interface type, pointer vs. value parameter
+  - binding
+  - "Learning Go" "methods" chapter
 
 
 # Quiz ideas
@@ -86,6 +95,9 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - what is unnamed pointer type? -> unnamed type: composition of previously declared types -> type literal (p. 135 Go programming lang book)
 - anon function. a) function that is not assigned to a variable, b) value as the result of function expression (YES), c) ..
   - bonus: why is it important and useful: named functions are only allowed on package level, so for defer() and other closure uses, anonymous functions are necessary.
+- anti hash DOS attack implementation when iterating over map
+  -> how is fmt.Print implemented so that elements are always sorted?
+- trace := 10, "Learning go" page 65
 
 # Other / links
 - GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps: https://www.youtube.com/watch?v=oL6JBUk6tj0
@@ -95,6 +107,9 @@ automatically add/remote modules to go.mod: `go mod tidy`
 - cloud native
   - https://www.capitalone.com/tech/cloud/what-is-cloud-native/
 - https://gophercises.com/
+- go graceful shutdown
+  - https://github.com/vardius/shutdown
+  - https://rafallorenz.com/go/handle-signals-to-graceful-shutdown-http-server/ 
 
 # Commands
 
